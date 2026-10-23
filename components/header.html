@@ -1,0 +1,146 @@
+<header class="main-header edu-header">
+    <!-- One-row header, same layout as megeducation.gov.in:
+         emblems + name | search | Digital India | skip · language · accessibility -->
+    <div class="edu-header-inner">
+        <a href="index.html" class="edu-logobox"
+           aria-label="Personnel and Administrative Reforms Department, Government of Meghalaya – home">
+            <img src="/assets/images/national_emblem.svg" alt="State Emblem of India" class="edu-emblem">
+            <img src="/assets/images/Gov_Of_Meghalaya_Logo.png" alt="Government of Meghalaya" class="edu-state-logo">
+            <span class="edu-logotext">
+                <span class="edu-govname">Government of Meghalaya</span>
+                <span class="edu-deptname">Personnel &amp; Administrative Reforms Department</span>
+            </span>
+        </a>
+
+        <div class="edu-search">
+            <form class="edu-search-box" id="siteSearchForm" method="get"
+                  action="https://www.google.com/search" target="_blank" autocomplete="off" role="search">
+                <input type="search" class="form-control" id="siteSearchInput"
+                       name="q" placeholder="Search..." maxlength="200"
+                       aria-label="Search the Personnel and Administrative Reforms Department website" required>
+                <input type="hidden" name="sitesearch" value="personnel.meghalaya.gov.in">
+                <button type="submit" class="edu-search-btn" aria-label="Search">
+                    <img src="/assets/icons/search.svg" alt="" aria-hidden="true">
+                </button>
+            </form>
+        </div>
+
+        <div class="edu-right">
+            <a href="https://www.digitalindia.gov.in/" class="edu-digital-india"
+               target="_blank" rel="noopener noreferrer" aria-label="Digital India (opens in a new window)">
+                <img src="/assets/images/digitalIndia.svg" alt="Digital India">
+            </a>
+            <ul class="edu-tools" aria-label="Accessibility and language controls">
+                <li>
+                    <a href="#main-content" class="site-access-button" aria-label="Skip to main content" title="Skip to main content">
+                        <img src="/assets/icons/skip_to_content.svg" alt="" aria-hidden="true">
+                    </a>
+                </li>
+                <li>
+                    <div class="bhashini_dropdown">
+                        <!-- The Bhashini plugin draws the language (अA) menu here. The icon below shows only until it loads. -->
+                        <div class="bhashini-plugin-container"></div>
+                        <span class="edu-lang-fallback" aria-hidden="true">
+                            <img src="/assets/icons/language.svg" alt="">
+                            <img src="/assets/icons/down.svg" alt="" class="edu-caret">
+                        </span>
+                    </div>
+                </li>
+                <li>
+                    <button type="button" class="site-access-button"
+                            id="uw-widget-custom-trigger2" aria-haspopup="dialog"
+                            aria-controls="uw-main" aria-expanded="false"
+                            aria-label="Accessibility options" title="Accessibility options">
+                        <img src="/assets/icons/accessibility.svg" alt="" aria-hidden="true">
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </div>
+</header>
+
+<nav class="main-navbar" aria-label="Main navigation">
+    <div class="container">
+
+        <button class="mobile-menu-toggle"
+                id="mobileMenuToggle"
+                type="button"
+                aria-label="Open navigation menu"
+                aria-controls="mainMenu"
+                aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <!-- DBIM level 1 heads (as on meity.gov.in): Home, Department, Offerings, Documents, Connect.
+             - Department = who we are: the Department, its set-up, who's who and its officers.
+             - Offerings  = what people apply for or use: property returns, grievance redressal.
+             - Documents  = what we publish: rules, notifications, forms.
+             - Connect    = how to reach us: contact, RTI, help.
+             Media (photo gallery, press releases) is the fifth DBIM head – add it when those pages exist.
+             Sitemap is in the footer, so it is not repeated here. -->
+        <ul class="main-menu" id="mainMenu">
+
+            <!-- Home -->
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+
+            <!-- LEVEL 1: Department -->
+            <li class="has-dropdown">
+                <a href="#" aria-haspopup="true" aria-expanded="false">
+                    Department
+                    <img src="/assets/icons/down.svg" alt="" aria-hidden="true">
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="about-us.html">About the Department</a></li>
+                    <li><a href="organisation.html">Organisation Set Up</a></li>
+                    <li><a href="who.html">Who's Who</a></li>
+                    <li><a href="ias-list.html">IAS Officers List</a></li>
+                    <li><a href="mcs-list.html">MCS Officers List</a></li>
+                </ul>
+            </li>
+
+            <!-- LEVEL 1: Offerings -->
+            <li class="has-dropdown">
+                <a href="#" aria-haspopup="true" aria-expanded="false">
+                    Offerings
+                    <img src="/assets/icons/down.svg" alt="" aria-hidden="true">
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="https://megedistrict.gov.in/directApply.do?serviceId=1287" target="_blank" rel="noopener noreferrer">File Annual Property Return<span class="visually-hidden"> (opens in a new window)</span></a></li>
+                    <li><a href="ipr.html">Property Return Status</a></li>
+                    <li><a href="public-grievance.html">State Public Grievance Redressal</a></li>
+                </ul>
+            </li>
+
+            <!-- LEVEL 1: Documents -->
+            <li class="has-dropdown">
+                <a href="#" aria-haspopup="true" aria-expanded="false">
+                    Documents
+                    <img src="/assets/icons/down.svg" alt="" aria-hidden="true">
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="rules.html">Rules, Orders and Circulars</a></li>
+                    <li><a href="notifications.html">Notifications</a></li>
+                    <li><a href="forms.html">Forms</a></li>
+                </ul>
+            </li>
+
+            <!-- LEVEL 1: Connect -->
+            <li class="has-dropdown">
+                <a href="#" aria-haspopup="true" aria-expanded="false">
+                    Connect
+                    <img src="/assets/icons/down.svg" alt="" aria-hidden="true">
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="contact-us.html">Contact Us</a></li>
+                    <li><a href="rti.html">Right to Information (RTI)</a></li>
+                    <li><a href="help.html">Help</a></li>
+                </ul>
+            </li>
+
+        </ul>
+    </div>
+</nav>

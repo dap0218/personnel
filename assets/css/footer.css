@@ -1,0 +1,356 @@
+/* =========================================================
+   FOOTER.CSS — Department of Arts and Culture, Meghalaya
+   MeitY-style footer. Layout comes from the Bootstrap grid
+   (row / col-lg-8 / col-lg-4); this file sets colours, type
+   and spacing only, so it never fights the grid.
+
+   Markup: components/footer.html
+   Background: #771D1D (key colour) — white text ≈ 11:1
+   ========================================================= */
+
+footer {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+footer .footerbox {
+    position: relative;
+    width: 100%;
+    padding: 40px 0 28px;
+    background: var(--dbim-wintergreen-dream);
+    color: #ffffff;
+    box-sizing: border-box;
+}
+
+footer .footerbox .container {
+    max-width: 1140px;
+}
+
+
+/* ==========================================
+   HEADING
+========================================== */
+
+footer .footerbox .usefula {
+    margin: 0 0 22px;
+    padding: 0;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 22px;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+}
+
+
+/* ==========================================
+   USEFUL LINKS
+   (columns come from Bootstrap: row-cols-2 row-cols-md-4)
+========================================== */
+
+footer .footerbox ul.useful-links-list {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+    list-style: none;
+}
+
+footer .footerbox ul.useful-links-list li {
+    display: flex;
+    align-items: center;
+    min-width: 0;
+}
+
+footer .footerbox ul.useful-links-list li a {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25px;
+    text-decoration: none;
+    white-space: nowrap;          /* keeps "Website Policies" on one line */
+}
+
+/* › chevron before each link */
+footer .footerbox ul.useful-links-list li a::before {
+    content: "";
+    flex: 0 0 auto;
+    width: 7px;
+    height: 7px;
+    border-top: 2px solid currentColor;
+    border-right: 2px solid currentColor;
+    transform: rotate(45deg);
+}
+
+footer .footerbox ul.useful-links-list li a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+
+/* ==========================================
+   SOCIAL ICONS (optional — only if the markup has them)
+========================================== */
+
+footer .footerbox ul.sociala {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 0 0 20px;
+    padding: 0;
+    list-style: none;
+}
+
+footer .footerbox ul.sociala li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;                  /* 44px touch target */
+    height: 44px;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: background-color .2s ease;
+}
+
+footer .footerbox ul.sociala li a:hover {
+    background: rgba(255, 255, 255, .15);
+}
+
+footer .footerbox ul.sociala li img {
+    display: block;
+    width: 27px;
+    height: 27px;
+    object-fit: contain;
+    filter: brightness(0) invert(1);   /* any icon colour → white */
+}
+
+
+/* ==========================================
+   GOVERNMENT LOGOS (right column)
+========================================== */
+
+footer .footerbox .government-logos {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+}
+
+footer .footerbox .government-logos a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 56px;
+    padding: 6px 10px;
+    background: #ffffff;
+    border-radius: 4px;
+    box-sizing: border-box;
+    text-decoration: none;
+    transition: box-shadow .2s ease;
+}
+
+footer .footerbox .government-logos a:hover {
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, .35);
+}
+
+footer .footerbox .government-logos img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Desktop: logos level with the first row of links */
+@media (min-width: 992px) {
+    footer .footerbox .government-logos {
+        margin-top: 44px;
+    }
+}
+
+
+/* ==========================================
+   BOTTOM ROW
+========================================== */
+
+footer .footerbox .footer-bottom {
+    margin-top: 32px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, .2);
+}
+
+footer .footerbox .footer-below-text {
+    margin: 0;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 23px;
+}
+
+footer .footerbox .footer-updated {
+    margin: 0;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+
+/* ==========================================
+   KEYBOARD FOCUS — white ring on the dark background
+========================================== */
+
+footer .footerbox a:focus-visible,
+footer .footer-back-top:focus-visible {
+    outline: 3px solid #ffffff;
+    outline-offset: 3px;
+}
+
+
+/* ==========================================
+   FLOATING BACK TO TOP BUTTON
+========================================== */
+
+footer .footer-back-top {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    background: var(--dbim-wintergreen-dream);
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    color: #ffffff;
+    cursor: pointer;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, .25);
+    transition: background-color .2s ease, transform .2s ease;
+}
+
+footer .footer-back-top:hover {
+    background: var(--dbim-powder-blue);
+    transform: translateY(-2px);
+}
+
+footer .footer-back-top .material-symbols-outlined {
+    color: #ffffff;
+    font-size: 25px;
+    line-height: 1;
+}
+
+
+/* ==========================================
+   TABLET (768px – 991px)
+========================================== */
+
+@media (max-width: 991.98px) {
+
+    footer .footerbox {
+        padding: 35px 0 30px;
+    }
+
+    footer .footerbox .footer-updated {
+        white-space: normal;
+    }
+
+    footer .footer-back-top {
+        right: 20px;
+        bottom: 70px;
+    }
+}
+
+
+/* ==========================================
+   MOBILE (up to 767px)
+========================================== */
+
+@media (max-width: 767.98px) {
+
+    footer .footerbox {
+        padding: 30px 0 25px;
+    }
+
+    footer .footerbox .usefula {
+        margin-bottom: 18px;
+        font-size: 15px;
+        line-height: 21px;
+    }
+
+    footer .footerbox ul.useful-links-list li a {
+        font-size: 15px;
+        line-height: 23px;
+        white-space: normal;      /* allow wrapping on narrow screens */
+    }
+
+    footer .footerbox .government-logos a {
+        width: 130px;
+        height: 50px;
+    }
+
+    footer .footerbox .footer-below-text {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    footer .footerbox .footer-updated {
+        font-size: 13px;
+        line-height: 19px;
+    }
+
+    footer .footer-back-top {
+        right: 15px;
+        bottom: 20px;
+        width: 40px;
+        height: 40px;
+    }
+}
+
+footer .footer-back-top img {
+    display: block;
+    width: 24px;
+    height: 24px;
+    filter: brightness(0) invert(1);   /* turns any icon colour white */
+}
+
+/* ==========================================
+   SMALL MOBILE (up to 480px)
+========================================== */
+
+@media (max-width: 480px) {
+
+    footer .footerbox .government-logos a {
+        width: calc(50% - 4px);
+        height: 46px;
+    }
+
+    footer .footerbox .footer-below-text {
+        font-size: 13px;
+        line-height: 19px;
+    }
+}
+
+
+/* ==========================================
+   REDUCED MOTION
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    footer .footer-back-top,
+    footer .footerbox ul.sociala li a,
+    footer .footerbox .government-logos a {
+        transition: none;
+    }
+    footer .footer-back-top:hover {
+        transform: none;
+    }
+}

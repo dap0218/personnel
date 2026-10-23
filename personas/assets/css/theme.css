@@ -1,0 +1,50 @@
+/* =========================================================
+   THEME.CSS — Personnel & Administrative Reforms Department, Government of Meghalaya
+   DBIM colour group: Green.
+   Loaded right after ../assets/css/style.css on every page, so these colours win
+   even if the shared style.css on the server belongs to another site.
+   To change the site's colours, change them here only.
+   ========================================================= */
+:root {
+  /* Primary palette - DBIM colour group: GREEN (exact DBIM values) */
+  --dbim-banner-transparency: rgba(15, 87, 87, 0.95);
+  --dbim-wintergreen-dream: #0F5757;   /* key colour, darkest - white text 8.3:1 */
+  --dbim-powder-blue: #2D8686;         /* borders, icons, large headings - 4.3:1, not for small text */
+  --dbim-columbia-blue: #75BDBD;       /* borders, icons, accents - never text */
+  --dbim-azureish-white: #A6D9D9;      /* hover fills, dividers */
+  --dbim-azureish-white-bg: #D9F2F2;   /* light panels */
+  /* Text-safe roles: #2D8686 is below 4.5:1 for small text, so links, small headings
+     and button fills use the key colour (or a darker shade of it) instead */
+  --dbim-text-accent: var(--dbim-wintergreen-dream);   /* 8.3:1 on white */
+  --dbim-fill-accent: #0A4343;                         /* hover fill behind white text, 11.5:1 */
+  /* Lighter section backgrounds: the light panel shade mixed with white */
+  --dbim-section-bg-strong: color-mix(in srgb, var(--dbim-azureish-white-bg) 50%, var(--dbim-white)); /* ≈ #ECF9F9 */
+  --dbim-section-bg: color-mix(in srgb, var(--dbim-azureish-white-bg) 35%, var(--dbim-white));        /* ≈ #F2FBFB */
+  --dbim-surface-tint: color-mix(in srgb, var(--dbim-azureish-white-bg) 18%, var(--dbim-white));      /* ≈ #F8FDFD */
+  --dbim-shadow-rgb: 15, 87, 87;        /* key colour as RGB, for shadows and overlays */
+  --dbim-white: #FFFFFF;
+  --dbim-dark-text: #22242A;
+
+  /* Functional palette (unchanged — DBIM 2.2) */
+  --dbim-linen: #EBEAEA;
+  --dbim-inclusive-white: #FFFFFF;
+  --dbim-deep-earthy-brown: #150202;
+  --dbim-black: #000000;
+  --dbim-deep-blue: #1D0A69;
+  --dbim-liberty-green: #198754;
+  --dbim-mustard-yellow: #FFC107;
+  --dbim-coral-red: #DC3545;
+  --dbim-info-blue: #0D6EFD;           /* keyboard focus ring */
+  --dbim-grey-01: #C6C6C6;
+  --dbim-grey-02: #8E8E8E;
+  --dbim-grey-03: #606060;
+
+  --dbim-font-family: "Noto Sans", sans-serif;
+
+  /* Compatibility aliases used by legacy site components */
+  --color-text-primary: var(--dbim-dark-text);
+  --color-bg-primary: var(--dbim-white);
+  --color-dark-green: var(--dbim-liberty-green);
+  --color-blue: var(--dbim-powder-blue);
+  --bs-modal-margin: 0.5rem;
+}

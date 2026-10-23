@@ -1,0 +1,344 @@
+#key-offerings-alerts.home-groups {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  background: transparent;
+}
+#key-offerings-alerts .dbim-panel { height: auto; }
+/* What's New list as tall as the Key Offerings column beside it */
+@media (min-width: 992px) {
+  #notice-board #myTabContent .tab-pane { max-height: 72rem; }
+}
+
+/* ---------- Section ---------- */
+.personas-section {
+  /* --dbim-section-gap is not defined in this site's style.css, so give a fallback
+     (without it the padding became 0 and the heading touched the top of the section) */
+  padding: var(--dbim-section-gap, 4rem) 0;
+  padding-top: 5.6rem;
+  background: var(--dbim-white);
+}
+/* Spacing for a wrapper <div class="section-title"> only. On this site the class is on the
+   <h2> itself (inside .section-heading); padding on the h2 pushed the icon below the text. */
+.personas-section div.section-title { padding-bottom: 2rem; margin-bottom: 0; }
+.personas-section div.section-title img { width: 2.8rem; height: 2.8rem; object-fit: contain; }
+.personas-section .section-heading { margin-bottom: 1.2rem; }
+.personas-section .section-heading > .section-title { padding: 0; margin: 0; }
+.personas-section .section-heading > img { flex: 0 0 2.8rem; width: 2.8rem; height: 2.8rem; object-fit: contain; }
+.personas-intro { margin: .8rem 0 0; color: var(--dbim-deep-earthy-brown); font-size: var(--dbim-fs-p2); line-height: 1.5; }
+
+/* ---------- Slider: one persona at a time ---------- */
+.pc-slider { position: relative; }
+.pc-nav {                                   /* counter + arrows in their own row above the slide (never over the title) */
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: .8rem;
+  margin: 0 0 1.2rem;
+}
+.pc-count { min-width: 4.4rem; color: var(--dbim-deep-earthy-brown); font-size: var(--dbim-fs-p2); font-weight: var(--dbim-font-weight-semibold); text-align: right; }
+.pc-arrow {
+  position: relative;
+  width: 4.4rem;
+  height: 4.4rem;
+  padding: 0;
+  cursor: pointer;
+  background: var(--dbim-white);
+  border: 2px solid var(--dbim-wintergreen-dream);
+  border-radius: 50%;
+  transition: background-color var(--dbim-transition-fast);
+}
+.pc-arrow::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1rem;
+  height: 1rem;
+  border-top: 3px solid var(--dbim-wintergreen-dream);
+  border-right: 3px solid var(--dbim-wintergreen-dream);
+}
+.pc-prev::before { transform: translate(-30%, -50%) rotate(-135deg); }
+.pc-next::before { transform: translate(-70%, -50%) rotate(45deg); }
+.pc-arrow:hover:not(:disabled) { background: var(--dbim-wintergreen-dream); }
+.pc-arrow:hover:not(:disabled)::before { border-color: var(--dbim-white); }
+.pc-arrow:disabled { cursor: default; opacity: .4; }
+.pc-arrow:focus-visible { outline: 3px solid var(--dbim-info-blue); outline-offset: 3px; }
+
+.pc-track {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  list-style: none;
+}
+.pc-track::-webkit-scrollbar { display: none; }
+
+/* One slide = illustration + intro + top services + button */
+.pc-slide {
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+  display: flex;
+  gap: 2.4rem;
+  margin: 0;
+  padding: 2.4rem;
+  background: var(--dbim-white);
+  border: 1px solid var(--dbim-grey-01);
+  border-top: 4px solid var(--dbim-wintergreen-dream);
+  border-radius: var(--dbim-border-radius-md);
+  box-shadow: var(--dbim-shadow-soft);
+}
+/* Headshot (DBIM persona image): square, head and shoulders, cropped from the top */
+.pc-slide-img {
+  flex: 0 0 34%;
+  align-self: center;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  background: var(--dbim-azureish-white-bg);
+  border: 1px solid var(--dbim-grey-01);
+  border-radius: var(--dbim-border-radius-md);
+}
+.pc-slide-img img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+.pc-slide-body { display: flex; flex-direction: column; min-width: 0; }
+.pc-slide-kicker { margin: 0; color: var(--dbim-deep-earthy-brown); font-size: var(--dbim-fs-p2); }
+.pc-slide-name { margin: 0 0 .8rem; color: var(--dbim-wintergreen-dream); font-weight: var(--dbim-font-weight-bold); }
+.pc-slide-text { margin: 0 0 1.4rem; color: var(--dbim-deep-earthy-brown); font-size: var(--dbim-fs-p2); line-height: 1.5; }
+.pc-slide-links { margin: 0 0 1.8rem; padding: 0; list-style: none; }
+.pc-slide-links li { border-bottom: 1px solid var(--dbim-grey-01); }
+.pc-slide-links li:last-child { border-bottom: 0; }
+.pc-slide-links a {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  min-height: 4.4rem;
+  padding: .8rem 0;
+  color: var(--dbim-text-accent);
+  font-size: var(--dbim-fs-p2);
+  font-weight: var(--dbim-font-weight-semibold);
+  line-height: 1.4;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.pc-slide-links a::before {
+  content: "";
+  flex: 0 0 .7rem;
+  height: .7rem;
+  border-top: 2px solid var(--dbim-wintergreen-dream);
+  border-right: 2px solid var(--dbim-wintergreen-dream);
+  transform: rotate(45deg);
+}
+.pc-slide-links a:hover { color: var(--dbim-wintergreen-dream); text-decoration-thickness: 2px; }
+.pc-slide-btn {
+  align-self: flex-start;
+  margin-top: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: .8rem;
+  min-height: 4.4rem;
+  padding: .9rem 1.8rem;
+  color: var(--dbim-white);
+  background: var(--dbim-wintergreen-dream);
+  border: 2px solid var(--dbim-wintergreen-dream);
+  border-radius: var(--dbim-border-radius-sm);
+  font-size: var(--dbim-fs-p2);
+  font-weight: var(--dbim-font-weight-bold);
+  text-decoration: none;
+  transition: background-color var(--dbim-transition-fast), color var(--dbim-transition-fast);
+}
+.pc-slide-btn::after {
+  content: "";
+  width: .7rem;
+  height: .7rem;
+  border-top: 2px solid currentColor;
+  border-right: 2px solid currentColor;
+  transform: rotate(45deg);
+}
+.pc-slide-btn:hover { color: var(--dbim-wintergreen-dream); background: var(--dbim-white); text-decoration: none; }
+.pc-slide a:focus-visible { outline: 3px solid var(--dbim-info-blue); outline-offset: 3px; }
+
+/* Persona chips: jump to any persona */
+.pc-chips {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: .8rem;
+  margin: 1.6rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+.pc-chip {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .4rem;
+  width: 100%;
+  height: 100%;
+  padding: .8rem .4rem;
+  cursor: pointer;
+  color: var(--dbim-wintergreen-dream);
+  background: var(--dbim-white);
+  border: 1px solid var(--dbim-grey-01);
+  border-radius: var(--dbim-border-radius-md);
+  font-size: var(--dbim-fs-p2);
+  font-weight: var(--dbim-font-weight-semibold);
+  line-height: 1.25;
+  transition: border-color var(--dbim-transition-fast), background-color var(--dbim-transition-fast);
+}
+.pc-chip img {                               /* round headshot */
+  width: 5.6rem;
+  height: 5.6rem;
+  object-fit: cover;
+  object-position: center top;
+  background: var(--dbim-azureish-white-bg);
+  border: 2px solid var(--dbim-white);
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px var(--dbim-grey-01);
+}
+.pc-chip:hover { border-color: var(--dbim-columbia-blue); }
+.pc-chip[aria-current="true"] { color: var(--dbim-white); background: var(--dbim-wintergreen-dream); border-color: var(--dbim-wintergreen-dream); }
+.pc-chip[aria-current="true"] img { box-shadow: 0 0 0 2px var(--dbim-white); }
+.pc-chip:focus-visible { outline: 3px solid var(--dbim-info-blue); outline-offset: 3px; }
+.pc-chips { display: none; }
+.pc-js .pc-chips { display: grid; }        /* chips only work with JavaScript */
+
+@media (max-width: 991.98px) {
+  .pc-chips, .pc-js .pc-chips { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+@media (max-width: 575.98px) {
+  .pc-slide { flex-direction: column; padding: 1.6rem; }
+  .pc-slide-img { flex-basis: auto; width: 60%; max-width: 24rem; align-self: flex-start; }
+  .pc-chips, .pc-js .pc-chips { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .pc-arrow, .pc-slide-btn, .pc-chip, .ps-card, .ps-other { transition: none; }
+}
+
+/* =========================================================
+   PERSONA PAGES (/personas/*.html) – same DBIM tokens and card pattern
+   ========================================================= */
+.ps-intro {
+  display: flex;
+  align-items: center;
+  gap: 3.2rem;
+  margin-bottom: 3.2rem;
+  padding: 2.4rem;
+  background: var(--dbim-azureish-white-bg);
+  border-radius: var(--dbim-border-radius-md);
+}
+.ps-intro-img {                             /* square headshot */
+  flex: 0 0 20rem;
+  width: 20rem;
+  height: 20rem;
+  object-fit: cover;
+  object-position: center top;
+  background: var(--dbim-white);
+  border: 1px solid var(--dbim-grey-01);
+  border-radius: var(--dbim-border-radius-md);
+}
+.ps-intro .section-title { padding-bottom: 1rem; margin: 0; text-align: left; }
+.ps-intro h1 { margin: 0; }
+.ps-intro-text { margin: 0; color: var(--dbim-deep-earthy-brown); font-size: var(--dbim-fs-p1); line-height: 1.6; text-align: left; }
+
+.ps-group { margin-bottom: 3.2rem; }
+.ps-group-title {
+  margin: 0 0 1.6rem;
+  padding-bottom: 1rem;
+  color: var(--dbim-wintergreen-dream);
+  border-bottom: 1px solid var(--dbim-grey-01);
+}
+
+.ps-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(28rem, 1fr));
+  gap: 1.6rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.ps-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: .6rem;
+  padding: 1.6rem;
+  background: var(--dbim-inclusive-white);
+  border: 1px solid var(--dbim-grey-01);
+  border-left: 4px solid var(--dbim-columbia-blue);
+  border-radius: var(--dbim-border-radius-md);
+  box-shadow: 0 1px 3px rgba(21, 2, 2, 0.06);
+  transition: border-color var(--dbim-transition-fast), box-shadow var(--dbim-transition-fast);
+}
+.ps-card:hover,
+.ps-card:focus-within {
+  border-color: var(--dbim-columbia-blue);
+  border-left-color: var(--dbim-wintergreen-dream);
+  box-shadow: var(--dbim-shadow-card);
+}
+.ps-card-title { margin: 0; font-size: var(--dbim-fs-p1); font-weight: var(--dbim-font-weight-bold); line-height: 1.4; }
+.ps-card-title a { color: var(--dbim-wintergreen-dream); text-decoration: none; }
+.ps-card-title a::after { content: ""; position: absolute; inset: 0; }   /* whole card clickable */
+.ps-card:hover .ps-card-title a { color: var(--dbim-text-accent); text-decoration: underline; }
+.ps-card-title a:focus-visible { outline: 3px solid var(--dbim-info-blue); outline-offset: 3px; }
+.ps-card-text { margin: 0; color: var(--dbim-deep-earthy-brown); font-size: var(--dbim-fs-p2); line-height: 1.5; }
+.ps-tag {
+  align-self: flex-start;
+  margin-top: auto;
+  padding: .2rem .8rem;
+  color: var(--dbim-wintergreen-dream);
+  background: var(--dbim-azureish-white-bg);
+  border-radius: var(--dbim-border-radius-sm);
+  font-size: var(--dbim-fs-p2);
+  font-weight: var(--dbim-font-weight-semibold);
+}
+
+/* Other personas */
+.ps-others { margin-top: 1.6rem; }
+.ps-others ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  gap: 1.2rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.ps-other {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .6rem;
+  height: 100%;
+  padding: 1.2rem .8rem;
+  color: var(--dbim-wintergreen-dream);
+  background: var(--dbim-white);
+  border: 1px solid var(--dbim-grey-01);
+  border-radius: var(--dbim-border-radius-md);
+  font-size: var(--dbim-fs-p2);
+  font-weight: var(--dbim-font-weight-bold);
+  text-align: center;
+  text-decoration: none;
+  transition: border-color var(--dbim-transition-fast), box-shadow var(--dbim-transition-fast);
+}
+.ps-other img {                             /* round headshot */
+  width: 7.2rem;
+  height: 7.2rem;
+  object-fit: cover;
+  object-position: center top;
+  background: var(--dbim-azureish-white-bg);
+  border-radius: 50%;
+}
+.ps-other:hover { border-color: var(--dbim-columbia-blue); box-shadow: var(--dbim-shadow-card); text-decoration: underline; }
+.ps-other:focus-visible { outline: 3px solid var(--dbim-info-blue); outline-offset: 3px; }
+
+@media (max-width: 767.98px) {
+  .ps-intro { flex-direction: column; align-items: flex-start; gap: 1.6rem; padding: 1.6rem; }
+  .ps-intro-img {                             /* square headshot */
+  flex: 0 0 20rem;
+  width: 20rem;
+  height: 20rem;
+  object-fit: cover;
+  object-position: center top;
+  background: var(--dbim-white);
+  border: 1px solid var(--dbim-grey-01);
+  border-radius: var(--dbim-border-radius-md);
+}
+}

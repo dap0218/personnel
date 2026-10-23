@@ -1,0 +1,612 @@
+footer {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+footer .footerbox {
+    position: relative;
+    width: 100%;
+    background: var(--dbim-wintergreen-dream);
+    color: #ffffff;
+    padding: 32px 0 25px;
+    box-sizing: border-box;
+}
+
+
+/* ==========================================
+   CONTAINER
+========================================== */
+
+footer .footerbox .container {
+    max-width: 1140px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* ==========================================
+   TOP FOOTER
+========================================== */
+
+footer .footerbox .footer-top {
+    display: flex;
+    align-items: flex-start;
+    margin: 0;
+    width: 100%;
+}
+
+
+/* ==========================================
+   COMMON HEADING
+========================================== */
+
+footer .footerbox .usefula {
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 700;
+
+    margin: 0 0 25px;
+    padding: 0;
+}
+
+
+/* ==========================================
+   USEFUL LINKS AREA
+========================================== */
+
+footer .footerbox .footer-useful {
+    padding-left: 0;
+    padding-right: 30px;
+    box-sizing: border-box;
+}
+
+
+/* ==========================================
+   USEFUL LINKS GRID
+========================================== */
+
+footer .footerbox ul.useful-links-list {
+    display: grid;
+
+    grid-template-columns:
+        140px
+        140px
+        150px
+        120px;
+
+    column-gap: 20px;
+    row-gap: 18px;
+
+    list-style: none;
+
+    margin: 0;
+    padding: 0;
+
+    width: 100%;
+}
+
+
+/* ==========================================
+   USEFUL LINK ITEM
+========================================== */
+
+footer .footerbox ul.useful-links-list li {
+    position: static;
+
+    display: flex;
+    align-items: center;
+
+    min-width: 0;
+    min-height: 32px;
+
+    margin: 0;
+    padding: 0;
+
+    transform: none;
+}
+
+
+/* ==========================================
+   CHEVRON
+========================================== */
+
+footer .footerbox ul.useful-links-list li .material-symbols-outlined {
+    flex-shrink: 0;
+
+    color: #ffffff;
+
+    font-family: "Material Symbols Outlined";
+
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 1;
+
+    margin-right: 4px;
+    padding: 0;
+
+    transform: none;
+}
+
+
+/* ==========================================
+   USEFUL LINK TEXT
+========================================== */
+
+footer .footerbox ul.useful-links-list li a {
+    display: inline;
+
+    color: #ffffff;
+
+    font-size: 20px;
+    line-height: 25px;
+    font-weight: 400;
+
+    text-decoration: none;
+
+    white-space: normal;
+
+    margin: 0;
+    padding: 0;
+}
+
+footer .footerbox ul.useful-links-list li a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+
+/* ==========================================
+   SUBSCRIBE AREA
+========================================== */
+
+footer .footerbox .footer-subscribe {
+    padding-left: 35px;
+    padding-right: 0;
+    box-sizing: border-box;
+}
+
+
+/* ==========================================
+   SOCIAL ICONS
+========================================== */
+
+footer .footerbox ul.sociala {
+    display: flex;
+
+    align-items: center;
+    justify-content: flex-start;
+
+    gap: 17px;
+
+    list-style: none;
+
+    margin: 0;
+    padding: 0;
+}
+
+footer .footerbox ul.sociala li {
+    position: static;
+
+    display: block;
+
+    margin: 0;
+    padding: 0;
+
+    transform: none;
+}
+
+footer .footerbox ul.sociala li a {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 28px;
+    height: 28px;
+
+    margin: 0;
+    padding: 0;
+
+    text-decoration: none;
+}
+
+footer .footerbox ul.sociala li img {
+    display: block;
+
+    width: 27px;
+    height: 27px;
+
+    margin: 0;
+    padding: 0;
+
+    object-fit: contain;
+}
+
+
+/* ==========================================
+   GOVERNMENT LOGOS
+========================================== */
+
+footer .footerbox .government-logos {
+    display: flex;
+
+    align-items: center;
+
+    gap: 5px;
+
+    margin-top: 38px;
+    padding: 0;
+}
+
+footer .footerbox .government-logos a {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #ffffff;
+
+    width: 116px;
+    height: 45px;
+
+    border-radius: 3px;
+
+    padding: 4px 6px;
+
+    box-sizing: border-box;
+
+    text-decoration: none;
+}
+
+footer .footerbox .government-logos img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    margin: 0;
+    padding: 0;
+
+    object-fit: contain;
+}
+
+
+/* ==========================================
+   BOTTOM FOOTER
+========================================== */
+
+footer .footerbox .footer-bottom {
+    display: flex;
+
+    align-items: flex-end;
+    justify-content: space-between;
+
+    gap: 30px;
+
+    width: 100%;
+
+    margin-top: 32px;
+    padding: 0;
+
+    box-sizing: border-box;
+}
+
+
+/* ==========================================
+   FOOTER MAINTENANCE TEXT
+========================================== */
+
+footer .footerbox .footer-below-text {
+    color: #ffffff;
+
+    font-size: 16px;
+    line-height: 23px;
+    font-weight: 400;
+
+    margin: 0;
+    padding: 0;
+}
+
+
+/* ==========================================
+   LAST UPDATED
+========================================== */
+
+footer .footerbox .footer-updated { 
+    color: #ffffff; 
+    font-size: 14px; 
+    line-height: 20px; 
+    font-weight: 400; 
+    margin: 0;
+    padding: 0; 
+    white-space: nowrap; 
+}
+
+
+/* ==========================================
+   FLOATING BACK TO TOP BUTTON
+========================================== */
+
+footer .footer-back-top {
+    position: fixed;
+
+    right: 24px;
+    bottom: 24px;
+
+    width: 44px;
+    height: 44px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+
+    border: none;
+    border-radius: 50%;
+
+    background: var(--dbim-wintergreen-dream);
+    color: #ffffff;
+
+    cursor: pointer;
+
+    z-index: 9999;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+footer .footer-back-top:hover {
+    background: var(--dbim-wintergreen-dream-hover);
+    transform: translateY(-2px);
+}
+
+footer .footer-back-top .material-symbols-outlined {
+    color: #ffffff;
+
+    font-size: 25px;
+    line-height: 1;
+}
+
+
+/* ==========================================
+   DESKTOP
+========================================== */
+
+@media (min-width: 992px) {
+
+    footer .footerbox {
+        min-height: 280px;
+    }
+
+    footer .footerbox .footer-subscribe {
+        padding-left: 180px;
+        padding-right: 24px;
+    }
+
+    footer .footerbox .footer-updated {
+        margin-right: 24px;
+    }
+
+}
+
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+    footer .footerbox {
+        padding: 35px 20px 30px;
+    }
+
+    footer .footerbox .footer-top {
+        display: block;
+    }
+
+    footer .footerbox .footer-useful {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    footer .footerbox .footer-subscribe {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+
+        margin-top: 35px;
+    }
+
+    footer .footerbox ul.useful-links-list {
+        grid-template-columns: repeat(4, 1fr);
+
+        column-gap: 20px;
+        row-gap: 16px;
+    }
+
+    footer .footerbox .footer-bottom {
+        margin-top: 35px;
+    }
+
+    footer .footer-back-top {
+        right: 20px;
+        bottom: 70px;
+    }
+
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 767px) {
+
+    footer .footerbox {
+        padding: 30px 15px 25px;
+    }
+
+    footer .footerbox .container {
+        max-width: 100%;
+    }
+
+    footer .footerbox .footer-top {
+        display: block;
+    }
+
+    footer .footerbox .footer-useful {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    footer .footerbox .footer-subscribe {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+
+        margin-top: 30px;
+    }
+
+    footer .footerbox .usefula {
+        font-size: 15px;
+        line-height: 21px;
+
+        margin-bottom: 20px;
+    }
+
+
+    /* -------------------------------
+       USEFUL LINKS
+    ------------------------------- */
+
+    footer .footerbox ul.useful-links-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        column-gap: 20px;
+        row-gap: 12px;
+
+        width: 100%;
+    }
+
+    footer .footerbox ul.useful-links-list li a {
+        font-size: 17px;
+        line-height: 23px;
+    }
+
+    footer .footerbox ul.useful-links-list li .material-symbols-outlined {
+        font-size: 17px;
+    }
+
+
+    /* -------------------------------
+       SOCIAL ICONS
+    ------------------------------- */
+
+    footer .footerbox ul.sociala {
+        gap: 15px;
+    }
+
+
+    /* -------------------------------
+       GOVERNMENT LOGOS
+    ------------------------------- */
+
+    footer .footerbox .government-logos {
+        margin-top: 25px;
+
+        flex-wrap: wrap;
+    }
+
+    footer .footerbox .government-logos a {
+        width: 110px;
+        height: 42px;
+    }
+
+    footer .footerbox .government-logos img {
+        width: 100%;
+        height: 100%;
+    }
+
+
+    /* -------------------------------
+       BOTTOM
+    ------------------------------- */
+
+    footer .footerbox .footer-bottom {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        gap: 30px;
+        width: 100%;
+        margin-top: 32px;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    footer .footerbox .footer-below-text {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    footer .footerbox .footer-updated {
+        font-size: 13px;
+        line-height: 19px;
+
+        white-space: normal;
+    }
+
+
+    /* -------------------------------
+       BACK TO TOP
+    ------------------------------- */
+
+    footer .footer-back-top {
+        right: 15px;
+        bottom: 20px;
+
+        width: 40px;
+        height: 40px;
+    }
+
+}
+
+
+/* ==========================================
+   SMALL MOBILE
+========================================== */
+
+@media (max-width: 480px) {
+
+    footer .footerbox ul.useful-links-list {
+        grid-template-columns: 1fr;
+
+        column-gap: 0;
+        row-gap: 12px;
+    }
+
+    footer .footerbox ul.useful-links-list li a {
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    footer .footerbox .government-logos a {
+        width: 105px;
+        height: 40px;
+    }
+
+    footer .footerbox .footer-below-text {
+        font-size: 13px;
+        line-height: 19px;
+    }
+
+}

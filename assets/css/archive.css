@@ -1,0 +1,178 @@
+/* =========================================================
+   ARCHIVE.CSS — Personnel & Administrative Reforms Department, Government of Meghalaya
+   What's New archive (latest-news.html) and Tenders (tenders.html).
+   Used with assets/js/archive.js. Colours are the DBIM tokens from style.css;
+   the banner and page heading come from inner-page.css.
+
+   Sizes use max(rem, px): never smaller than the px value, but they still grow
+   with the site's A+ text-size buttons. !important is needed because style.css
+   sets small fixed sizes on labels, buttons and paragraphs.
+   ========================================================= */
+
+.archive-page .archive-intro { margin: 0 0 2.4rem; font-size: max(1.6rem, 16px); line-height: 1.6; color: var(--dbim-dark-text); }
+.archive-page .archive-intro a { color: var(--dbim-text-accent); text-decoration: underline; text-underline-offset: .2em; }
+
+/* ---------- Search / filter bar ---------- */
+#archive .archive-controls {
+  margin-bottom: 2rem !important;
+  padding: 2rem;
+  background: var(--dbim-section-bg, #F2FBFB);
+  border: 1px solid var(--dbim-azureish-white);
+  border-radius: 1rem;
+}
+#archive .archive-controls .form-label {
+  display: block;
+  margin-bottom: 8px !important;
+  color: var(--dbim-dark-text) !important;
+  font-size: max(1.6rem, 16px) !important;
+  font-weight: 700 !important;
+  line-height: 1.4 !important;
+}
+#archive .archive-controls .form-control,
+#archive .archive-controls .form-select,
+#archive .archive-controls .btn {
+  height: max(4.8rem, 48px) !important;
+  min-height: max(4.8rem, 48px) !important;
+  font-size: max(1.6rem, 16px) !important;
+  line-height: 1.4 !important;
+  box-sizing: border-box;
+}
+#archive .archive-controls .form-control,
+#archive .archive-controls .form-select {
+  padding: 8px 14px !important;
+  background-color: var(--dbim-white) !important;
+  border: 2px solid #6c757d !important;
+  border-radius: .6rem !important;
+  color: var(--dbim-dark-text) !important;
+}
+#archive .archive-controls .form-select { padding-right: 40px !important; }
+#archive .archive-controls .form-control::placeholder { color: #595959; opacity: 1; }
+
+/* Clear button: white on the key colour (≈11:1) */
+#archive .archive-controls .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 8px 20px !important;
+  background-color: var(--dbim-wintergreen-dream) !important;
+  border: 2px solid var(--dbim-wintergreen-dream) !important;
+  border-radius: .6rem !important;
+  color: var(--dbim-white) !important;
+  font-weight: 700 !important;
+}
+#archive .archive-controls .btn:hover { background-color: var(--dbim-fill-accent) !important; border-color: var(--dbim-powder-blue) !important; }
+
+#archive .archive-controls .form-control:focus-visible,
+#archive .archive-controls .form-select:focus-visible,
+#archive .archive-controls .btn:focus-visible {
+  outline: 4px solid #000 !important;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 6px #ffbf47 !important;   /* yellow halo – visible on any background */
+}
+
+/* ---------- Section tabs (All / Notices / Tenders and EOIs) ---------- */
+#archive .archive-tabs {
+  gap: .8rem;
+  margin-bottom: 1.6rem !important;
+  border-bottom: 2px solid var(--dbim-wintergreen-dream);
+}
+#archive .archive-tabs .nav-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 4.4rem;
+  margin-bottom: -2px;
+  padding: .8rem 1.8rem;
+  background: var(--dbim-white);
+  border: 2px solid var(--dbim-azureish-white);
+  border-bottom-color: var(--dbim-wintergreen-dream);
+  border-radius: .6rem .6rem 0 0;
+  color: var(--dbim-wintergreen-dream);
+  font-size: max(1.6rem, 16px);
+  font-weight: 700;
+}
+#archive .archive-tabs .nav-link:hover { background: var(--dbim-section-bg, #F2FBFB); }
+#archive .archive-tabs .nav-link.active {
+  background: var(--dbim-wintergreen-dream);
+  border-color: var(--dbim-wintergreen-dream);
+  color: var(--dbim-white);
+}
+#archive .archive-tabs .nav-link.archive-empty:not(.active) { color: #5f5f5f; }
+#archive .archive-tabs .nav-link:focus-visible { outline: 4px solid #000; outline-offset: 2px; box-shadow: 0 0 0 6px #ffbf47; }
+#archive .archive-count { font-size: .8em; }
+#archive .archive-count.bg-secondary { background: var(--dbim-fill-accent) !important; }
+
+/* ---------- Results line ---------- */
+#archive .archive-status {
+  margin: 8px 0 16px !important;
+  color: var(--dbim-dark-text) !important;
+  font-size: max(1.6rem, 16px) !important;
+  font-weight: 700 !important;
+  line-height: 1.5 !important;
+}
+#archive .archive-status:focus { outline: 3px solid currentColor; outline-offset: 3px; }
+#archive .archive-suggest .btn-link,
+#archive .archive-section-link {
+  color: var(--dbim-text-accent);
+  font-size: inherit !important;   /* style.css makes buttons small */
+  font-weight: 600;
+  line-height: inherit;
+  text-align: left;
+  text-decoration: underline;
+}
+
+/* ---------- Table ---------- */
+.archive-table { margin-bottom: 2rem; font-size: max(1.5rem, 15px); }
+.archive-table > :not(caption) > * > * { padding: 1rem 1.2rem; }
+.archive-table thead th {
+  background: var(--dbim-wintergreen-dream) !important;
+  border-color: var(--dbim-wintergreen-dream) !important;
+  color: var(--dbim-white) !important;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.archive-table td { text-align: left; vertical-align: top; }   /* DBIM 4.1.1: left-aligned body text */
+.archive-table.table-striped > tbody > tr:nth-of-type(odd) > * { --bs-table-accent-bg: var(--dbim-surface-tint, #FFFBF2); }
+.archive-table .archive-sno { width: 7rem; text-align: center; }
+.archive-table .archive-date { width: 12rem; white-space: nowrap; }
+.archive-table .archive-section { width: 16rem; }
+.archive-table a { color: var(--dbim-text-accent); font-weight: 500; text-decoration: underline; text-underline-offset: .2em; }
+.archive-table a:hover { color: var(--dbim-wintergreen-dream); text-decoration-thickness: 2px; }
+.archive-table .file-type { color: #4A4A4A; font-size: .9em; font-weight: 400; white-space: nowrap; }
+.archive-table mark { padding: 0 .1em; background: #ffe58a; color: inherit; }
+
+/* ---------- Pagination ---------- */
+#archive .archive-pager .pagination { gap: 8px; margin-top: 8px; }
+#archive .archive-pager .page-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: max(4.8rem, 48px);
+  min-height: max(4.8rem, 48px);
+  margin-left: 0 !important;
+  padding: 6px 16px !important;
+  background: var(--dbim-white) !important;
+  border: 2px solid var(--dbim-wintergreen-dream) !important;
+  border-radius: 6px !important;   /* separate rounded buttons */
+  color: var(--dbim-wintergreen-dream) !important;
+  font-size: max(1.6rem, 16px) !important;
+  font-weight: 700 !important;
+}
+#archive .archive-pager .page-link:hover { background: var(--dbim-section-bg, #F2FBFB) !important; }
+#archive .archive-pager .page-item.active .page-link { background: var(--dbim-wintergreen-dream) !important; color: var(--dbim-white) !important; }
+#archive .archive-pager .page-item.disabled .page-link { border-color: #adb5bd !important; color: #6c757d !important; }
+#archive .archive-pager .page-link:focus-visible {
+  z-index: 3;
+  outline: 4px solid #000 !important;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 6px #ffbf47 !important;
+}
+
+/* ---------- Small screens ---------- */
+@media (max-width: 575.98px) {
+  #archive .archive-controls { padding: 1.4rem; }
+  #archive .archive-tabs .nav-link { padding: .6rem 1.2rem; }
+  .archive-table .archive-sno { width: 4rem; }
+  .archive-table .archive-date { width: auto; }
+  #archive .archive-pager .page-link { min-width: 44px; min-height: 44px; padding: 4px 10px !important; }
+}

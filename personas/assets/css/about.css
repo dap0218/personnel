@@ -1,0 +1,43 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr); /* 3 columns */
+  gap: 15px;                             /* gap between cards */
+}
+
+
+.info-card {
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background: white;       /* Keep background white */
+  text-decoration: none;
+  color: #000;
+  transition: box-shadow 0.2s ease;
+}
+
+.info-card:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background: white;       /* Ensure background stays white on hover */
+}
+
+.info-card .icon {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #aaa;
+  border-radius: 50%;
+  font-size: 18px;
+  margin-right: 15px;
+  background: transparent; /* Remove any black bg */
+  color: #000;             /* Arrow color */
+  user-select: none;       /* Optional: prevent text selection */
+}
+
+.info-card .icon:hover {
+  background: transparent;
+  color: #000;
+}
