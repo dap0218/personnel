@@ -8,7 +8,7 @@
  *            (tab label and Tab ID come from there, in the same order).
  *   Search:  works across every tab; each tab shows how many items match, and if the open
  *            tab has nothing, the page offers the tab that does.
- *   Order:   a sheet's row order is newest → oldest (new items go at the top). On the
+ *   Order:   a sheet's row order is oldest → newest (new items go at the bottom). On the
  *            "All" tab items are ordered by year, then by their position in the sheet.
  *
  * Page markup (one page for everything):
@@ -132,14 +132,14 @@
         year: year,
         size: str(r[7]),
         dateNum: dateNum(date),                   // yyyymmdd for sorting, 0 if no date
-        order: items.length,                      // sheet position: 0 = newest
+        order: items.length,                      // sheet position: 0 = oldest, last row = newest
         tab: tab ? tab.id : "",
         tabLabel: tab ? tab.label : sheet,
         tabIndex: tab ? tab.index : 0,
         search: fold(title + " " + date + " " + year)
       });
     });
-    // A row without a Date Added sorts with the dated row above it (sheets are newest first),
+    // A row without a Date Added sorts with the dated row above it (sheets are oldest first),
     // as on the homepage. The Date column still shows "–" for it.
     var lastNum = 0, lastYear = "";
     items.forEach(function (it) {
@@ -312,7 +312,7 @@
           if (ya !== yb) return dir * (ya < yb ? 1 : -1);
           if (a.tabIndex !== b.tabIndex) return a.tabIndex - b.tabIndex;
         }
-        return dir * (a.order - b.order);
+        return dir * (b.order - a.order);         // lower row in the sheet = newer
       });
 
       var pages = Math.max(1, Math.ceil(filtered.length / state.per));

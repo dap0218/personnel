@@ -1,7 +1,7 @@
 /* =========================================================
-   HOME.CSS — Directorate of Sericulture and Weaving, Government of Meghalaya
-   Homepage-only styles. Base styles and the Chrome Yellow colour
-   tokens live in style.css, so load style.css first.
+   HOME.CSS — Personnel & Administrative Reforms Department, Government of Meghalaya
+   Homepage-only styles. Base styles live in style.css and the DBIM
+   Green colour tokens in theme.css, so load style.css first.
 
    1.  Hero banner
    2.  Announcements ticker
@@ -102,7 +102,6 @@
   margin: 0;
   padding: 0 1.2rem 0 0;
   color: var(--dbim-deep-earthy-brown);
-  font-size: 1.6rem;
   font-weight: 700;
   line-height: 1.2;
   white-space: nowrap;
@@ -129,7 +128,7 @@
   width: 100%;
   overflow: hidden;
   color: var(--dbim-deep-earthy-brown);
-  font-size: 1.5rem;
+  font-size: var(--dbim-fs-p1);
   font-weight: 500;
   line-height: 1.45;
   text-decoration: none;
@@ -183,9 +182,9 @@
 }
 @media (max-width: 767.98px) {
   .news-ticker-horizontal { min-height: 6.4rem; padding: 1rem 5.6rem 1rem 1.5rem; gap: .8rem; }
-  .news-ticker-horizontal h2 { padding-right: .4rem; font-size: 1.4rem; }
+  .news-ticker-horizontal h2 { padding-right: .4rem; }
   .news-ticker-horizontal .ticker-window { height: 4.2rem; }
-  .news-ticker-horizontal .ticker-track a { font-size: 1.3rem; line-height: 1.35; }
+  .news-ticker-horizontal .ticker-track a { line-height: 1.35; }
   .news-ticker-horizontal .ticker-toggle { right: .7rem; }
 }
 
@@ -244,9 +243,6 @@
 @media (max-width: 480px) {
   .minister-profile { max-width: 100%; padding: 1rem; }
   .minister-photo { height: 10rem; margin-bottom: 1rem; }
-  .minister-profile h3,
-  .minister-profile > p { font-size: 1.4rem; }
-  .minister-profile small { font-size: 1.2rem; }
 }
 
 /* =========================================================
@@ -287,18 +283,13 @@
   margin: 0 !important;
   padding: 0;
   color: var(--dbim-text-accent) !important;
-  font-size: 2.4rem;
+  font-size: var(--dbim-fs-h2);
   font-weight: 700 !important;
   line-height: 1.3 !important;
   text-align: left;
 }
 .intro-heading-box h2 a { color: inherit; text-decoration: none; }
 .intro-heading-box h2 a:hover { text-decoration: underline; }
-@media (max-width: 991.5px) {
-  .section-heading h2,
-  .section-heading .section-title,
-  .intro-heading-box h2 { font-size: 2rem; }
-}
 
 /* =========================================================
    4b. ALTERNATING SECTION BACKGROUNDS
@@ -386,7 +377,7 @@
   background: var(--dbim-wintergreen-dream);   /* key colour - white text 8.3:1 */
   border-radius: .6rem;
   color: var(--dbim-white);
-  font-size: 1.5rem;
+  font-size: var(--dbim-fs-p1);
   font-weight: 500;
   line-height: 1.5;
   text-decoration: none;
@@ -408,7 +399,7 @@
 .wn-item a:hover .wn-text { text-decoration: underline; }
 .wn-item a:focus-visible { outline: 3px solid var(--dbim-info-blue); outline-offset: 2px; }
 @media (max-width: 575.98px) {
-  .wn-item a { padding: 1rem 1.2rem; font-size: 1.4rem; }
+  .wn-item a { padding: 1rem 1.2rem; }
 }
 
 /* Key Offerings and What's New panels are the same height on desktop
@@ -424,7 +415,7 @@
 .ko-intro {
   margin: -.6rem 0 1.6rem;
   color: var(--dbim-grey-03);
-  font-size: 1.4rem;
+  font-size: var(--dbim-fs-p2);
 }
 /* One offering per row (as on the Education site) */
 .ko-grid {
@@ -464,7 +455,7 @@
 .ko-text { display: flex; flex-direction: column; min-width: 0; }
 .ko-text a {
   color: var(--dbim-wintergreen-dream);
-  font-size: 1.5rem;
+  font-size: var(--dbim-fs-p1);
   font-weight: 700;
   line-height: 1.3;
   text-decoration: none;
@@ -474,7 +465,7 @@
 .ko-text small {
   margin-top: .2rem;
   color: #3D4043;
-  font-size: 1.25rem;
+  font-size: var(--dbim-fs-small);
   line-height: 1.4;
 }
 .ko-card:hover {
@@ -500,10 +491,6 @@
 #wings { scroll-margin-top: 12rem; }   /* header menu "Wings and Institutions" link lands below the sticky header */
 
 /* Wing colours (non-text, all ≥ 3:1 against white) */
-[data-wing="performing"] { --wing: var(--dbim-wintergreen-dream); }
-[data-wing="heritage"]   { --wing: var(--dbim-powder-blue); }
-[data-wing="library"]    { --wing: #7A4F00; }   /* rust */
-[data-wing="research"]   { --wing: #3D2900; }
 [data-wing="department"] { --wing: var(--dbim-wintergreen-dream); }
 [data-wing="commission"] { --wing: var(--dbim-powder-blue); }
 
@@ -519,7 +506,7 @@
 .org-intro {
   margin: .8rem 0 0;
   color: var(--dbim-grey-03);
-  font-size: 1.5rem;
+  font-size: var(--dbim-fs-p1);
 }
 .org-wings {
   display: flex;
@@ -538,7 +525,7 @@
   border: 1px solid var(--dbim-azureish-white);
   border-radius: 99rem;
   color: var(--dbim-wintergreen-dream);
-  font-size: 1.3rem;
+  font-size: var(--dbim-fs-p2);
   font-weight: 600;
 }
 .org-wings li::before {
@@ -600,7 +587,7 @@
   display: block;
   margin-bottom: .2rem;
   color: var(--dbim-text-accent);
-  font-size: 1.15rem;
+  font-size: var(--dbim-fs-small);
   font-weight: 700;
   letter-spacing: .06em;
   text-transform: uppercase;
@@ -608,7 +595,7 @@
 .org-tile h3 {
   margin: 0;
   color: var(--dbim-dark-text);
-  font-size: 1.7rem;
+  font-size: var(--dbim-fs-h3);
   font-weight: 700;
   line-height: 1.3;
 }
@@ -617,7 +604,7 @@
 .org-tile p {
   margin: .4rem 0 0;
   color: #3D4043;
-  font-size: 1.35rem;
+  font-size: var(--dbim-fs-p2);
   line-height: 1.45;
 }
 .org-arrow {
@@ -662,7 +649,7 @@
   background: transparent !important;
   background-image: none !important;
 }
-/* Slide card and image panel in the Chrome Yellow shades */
+/* Slide card and image panel in the DBIM Green shades */
 .personas-section .pc-slide {
   background: var(--dbim-white) !important;
   border-color: var(--dbim-azureish-white) !important;
@@ -716,7 +703,7 @@
 .svc-item h3 {
   margin: 0;
   color: var(--dbim-text-accent);
-  font-size: 1.7rem;
+  font-size: var(--dbim-fs-h3);
   font-weight: 700;
   line-height: 1.3;
 }
@@ -726,7 +713,7 @@
 .svc-item p {
   margin: .4rem 0 0;
   color: #3D4043;
-  font-size: 1.35rem;
+  font-size: var(--dbim-fs-p2);
   line-height: 1.45;
 }
 .svc-arrow {
@@ -796,14 +783,14 @@
 .alert-title {
   margin: 0 0 .6rem;
   color: var(--dbim-deep-earthy-brown);
-  font-size: 1.6rem;
+  font-size: var(--dbim-fs-p1);
   font-weight: 700;
   line-height: 1.4;
 }
 .alert-item a {
   display: inline-block;
   color: var(--dbim-text-accent);
-  font-size: 1.4rem;
+  font-size: var(--dbim-fs-p2);
   font-weight: 600;
   line-height: 1.5;
   text-decoration: underline;
@@ -855,7 +842,7 @@
   background: var(--dbim-white);
   border-bottom: 1px solid var(--dbim-azureish-white-bg);
   color: var(--dbim-deep-earthy-brown) !important;
-  font-size: 1.4rem;
+  font-size: var(--dbim-fs-p2);
   font-weight: 500;
   line-height: 1.35;
   text-decoration: none !important;
@@ -902,7 +889,7 @@
 .location-text p {
   margin: 0 0 2rem;
   color: var(--dbim-dark-text);
-  font-size: 1.6rem;
+  font-size: var(--dbim-fs-p1);
   line-height: 1.6;
 }
 .location-actions { display: flex; flex-wrap: wrap; gap: 1rem; }
@@ -939,7 +926,7 @@
   border: 1px solid var(--dbim-powder-blue);
   border-radius: .4rem;
   color: var(--dbim-text-accent);
-  font-size: 1.3rem;
+  font-size: var(--dbim-fs-p2);
   font-weight: 600;
   line-height: 1.2;
   text-decoration: none;
@@ -1101,7 +1088,7 @@
 }
 .headbox .card-img-overlay .headline p {
   color: var(--dbim-dark-text);
-  font-size: 2.4rem;
+  font-size: var(--dbim-fs-h2);
   font-style: normal;
   font-weight: 500;
   line-height: 29px;
@@ -1112,7 +1099,7 @@
   width: 75%;
   margin-bottom: 0;
   color: var(--dbim-dark-text);
-  font-size: 1.4rem;
+  font-size: var(--dbim-fs-p2);
   font-style: normal;
   font-weight: 400;
   line-height: 21px;
@@ -1121,11 +1108,9 @@
 }
 @media (max-width: 1537px) {
   .headbox .card-img-overlay .headline p {
-    font-size: 1.4rem;
     line-height: normal;
   }
   .headbox .card-img-overlay .headline2 {
-    font-size: 1.2rem;
     line-height: normal;
   }
 }
@@ -1148,7 +1133,7 @@
 }
 .departmentboxslider h3 {
   color: var(--dbim-dark-text);
-  font-size: 1.6rem;
+  font-size: var(--dbim-fs-p1);
   font-style: normal;
   font-weight: 600;
   line-height: 18px;
@@ -1193,7 +1178,7 @@
 }
 .departmentboxslider .slick-active .sliderbox1 p {
   margin-top: 24px;
-  font-size: 1.2rem;
+  font-size: var(--dbim-fs-small);
   font-weight: 800;
 }
 .sliderbox1 a {
@@ -1201,9 +1186,6 @@
   color: var(--dbim-text-accent);
   font-weight: 800;
   text-decoration: none;
-}
-@media (max-width: 1537px) {
-  .sliderbox1 a { font-size: 1.4rem; }
 }
 
 /* --- Slick persona sliders (older design; current personas use personas.css) --- */
@@ -1305,7 +1287,7 @@
   margin: 0;
   padding: 0;
   color: var(--dbim-dark-text);
-  font-size: 1.4rem;
+  font-size: var(--dbim-fs-p2);
   font-weight: 800;
   line-height: 24px;
   text-align: center;
@@ -1667,7 +1649,6 @@
   }
   .waw .explore_head span {
     padding: 0 12px;
-    font-size: 1.15rem;
   }
   .waw .explore_head span::before,
   .waw .explore_head span::after { width: 35px; }
@@ -1697,7 +1678,7 @@
 .organisation-box .section-title {
   margin: 0;
   color: var(--dbim-wintergreen-dream);
-  font-size: 1.5rem;
+  font-size: var(--dbim-fs-p1);
   font-weight: 600;
   line-height: 1.3;
 }
@@ -1723,7 +1704,7 @@
 .organisation-link span {
   display: block;
   color: var(--dbim-dark-text);
-  font-size: 1.4rem;
+  font-size: var(--dbim-fs-p2);
   font-weight: 600;
   line-height: 1.4;
 }
@@ -1751,13 +1732,11 @@
 }
 @media (max-width: 991.98px) {
   .organisation-box { padding: 18px; }
-  .organisation-box .section-title { font-size: 1.4rem; }
   .organisation-links { gap: 10px; }
   .organisation-link {
     min-height: 64px;
     padding: 10px 40px 10px 18px;
   }
-  .organisation-link span { font-size: 1.35rem; }
 }
 @media (max-width: 767.98px) {
   .organisation-box {
@@ -1770,7 +1749,6 @@
     width: 26px;
     height: 26px;
   }
-  .organisation-box .section-title { font-size: 1.3rem; }
   .organisation-links {
     grid-template-columns: 1fr;
     gap: 9px;
@@ -1779,7 +1757,6 @@
     min-height: 60px;
     border-left-width: 4px;
   }
-  .organisation-link span { font-size: 1.3rem; }
   .organisation-link > img:last-child {
     right: 12px;
     width: 17px;
@@ -1788,12 +1765,10 @@
 }
 @media (max-width: 480px) {
   .organisation-box { padding: 14px; }
-  .organisation-box .section-title { font-size: 1.2rem; }
   .organisation-link {
     min-height: 68px;
     padding-left: 16px;
   }
-  .organisation-link span { font-size: 1.2rem; }
 }
 
 /* Older What's New / Key Offerings markup (whats-new-box, key-offerings-tabs).
@@ -1807,7 +1782,7 @@
   background: var(--dbim-white);
   border: 1px solid var(--dbim-columbia-blue);
   color: var(--dbim-wintergreen-dream);
-  font-size: 1.3rem;
+  font-size: var(--dbim-fs-p2);
   font-weight: 600;
   line-height: 1.2;
   cursor: pointer;
@@ -1830,7 +1805,7 @@
   background: var(--dbim-white);
   border-bottom: 1px solid var(--dbim-azureish-white);
   color: var(--dbim-deep-earthy-brown);
-  font-size: 1.3rem;
+  font-size: var(--dbim-fs-p2);
   line-height: 1.4;
   text-decoration: none !important;
   transition: background-color .2s ease;
@@ -1848,7 +1823,7 @@
   padding: .8rem .4rem;
   border-bottom: 1px solid rgba(255, 255, 255, .3);
   color: var(--dbim-white) !important;
-  font-size: 1.3rem;
+  font-size: var(--dbim-fs-p2);
   line-height: 1.35;
   text-decoration: none !important;
 }
@@ -1859,8 +1834,6 @@
 @media (max-width: 575.98px) {
   .key-offerings-tabs { overflow-x: auto; }
   .key-offerings-tabs button { white-space: nowrap; }
-  .key-offering-item,
-  .whats-new-item { font-size: 1.2rem; }
 }
 
 /* Photo placeholder (for a missing leadership photo) */
@@ -1876,7 +1849,7 @@
 .commissioner-photo-placeholder p {
   margin: 0;
   color: var(--dbim-deep-earthy-brown);
-  font-size: 1.4rem;
+  font-size: var(--dbim-fs-p2);
   font-weight: 600;
   line-height: 1.4;
 }
@@ -1895,11 +1868,8 @@
 }
 
 /* =========================================================
-   SERICULTURE AND WEAVING ADDITIONS
+   PERSONNEL ADDITIONS
    ========================================================= */
-/* Wing colours (non-text, both ≥ 5:1 against white) */
-[data-wing="sericulture"] { --wing: var(--dbim-wintergreen-dream); }
-[data-wing="handloom"]    { --wing: var(--dbim-powder-blue); }
 
 /* "At a glance" key facts, next to About Us */
 .facts-panel {
@@ -1913,16 +1883,16 @@
 .facts-title {
   margin: 0 0 1.6rem;
   color: var(--dbim-text-accent);
-  font-size: 2.2rem;
+  font-size: var(--dbim-fs-h2);
   font-weight: 700;
 }
 .facts-list { display: grid; gap: 1.4rem; margin: 0; padding: 0; list-style: none; }
-.facts-list li { display: flex; align-items: center; gap: 1.2rem; font-size: 1.5rem; line-height: 1.4; color: var(--dbim-dark-text); }
+.facts-list li { display: flex; align-items: center; gap: 1.2rem; font-size: var(--dbim-fs-p1); line-height: 1.4; color: var(--dbim-dark-text); }
 .facts-list img {
   flex: 0 0 4.4rem; width: 4.4rem; height: 4.4rem; padding: .8rem;
   background: var(--dbim-white); border: 1px solid var(--dbim-azureish-white); border-radius: 50%;
 }
-.facts-list strong { display: block; color: var(--dbim-wintergreen-dream); font-size: 2.2rem; line-height: 1.15; }
+.facts-list strong { display: block; color: var(--dbim-wintergreen-dream); font-size: var(--dbim-fs-h2); line-height: 1.15; }
 @media (max-width: 767.98px) { .facts-panel { margin-top: 2.4rem; } }
 
 /* Photo Gallery strip (album cards come from gallery.css) */
@@ -1933,15 +1903,15 @@
 /* Online Services in the left column: one service per row */
 .svc-list.svc-list-stack { grid-template-columns: 1fr !important; }
 
-/* ---------- Banner caption (Personnel): text as HTML, not part of the image (DBIM 8.1) ---------- */
+/* ---------- Banner caption: text as HTML, not part of the image (DBIM 8.1) ---------- */
 #govBanner .carousel-item { position: relative; }
 #govBanner .banner-caption {
   position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: center;
   padding: 0 8% 0 10%; max-width: 72rem; color: var(--dbim-white);
 }
-#govBanner .banner-kicker { margin: 0 0 .8rem; font-size: 1.6rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--dbim-azureish-white-bg); }
-#govBanner .banner-title { margin: 0 0 1.2rem; font-size: clamp(2.4rem, 3.4vw, 4.4rem); font-weight: 700; line-height: 1.2; }
-#govBanner .banner-sub { margin: 0; font-size: clamp(1.5rem, 1.4vw, 2rem); line-height: 1.5; color: var(--dbim-white); }
+#govBanner .banner-kicker { margin: 0 0 .8rem; font-size: var(--dbim-fs-p1); font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--dbim-azureish-white-bg); }
+#govBanner .banner-title { margin: 0 0 1.2rem; font-size: var(--dbim-fs-h1); font-weight: 700; line-height: 1.2; }
+#govBanner .banner-sub { margin: 0; font-size: var(--dbim-fs-h3); line-height: 1.5; color: var(--dbim-white); }
 @media (max-width: 767.98px) {
   #govBanner .carousel-item img { min-height: 22rem; object-fit: cover; }
   #govBanner .banner-caption { padding: 0 1.6rem 0 6rem; }

@@ -245,7 +245,7 @@ header.main-header .menutop a, header.main-header .site-access-button {
   border: 0;
   border-radius: .4rem;
   background: transparent;
-  color: var(--dbim-wintergreen-dream, #162F6A);
+  color: var(--dbim-wintergreen-dream, #0F5757);
   cursor: pointer;
 }
 
@@ -259,7 +259,7 @@ header.main-header .menutop img, header.main-header .site-access-button img {
 }
 
 header.main-header .menutop a:hover, header.main-header .site-access-button:hover {
-  background: var(--dbim-azureish-white-bg, #D2DFFF);
+  background: var(--dbim-azureish-white-bg, #D9F2F2);
 }
 
 header.main-header .menutop a:focus-visible, header.main-header .site-access-button:focus-visible {
@@ -353,7 +353,7 @@ header.main-header form.search-box {
   margin: 0;
   padding: 0 .6rem 0 1rem;
   border: 1px solid var(--dbim-grey-01, #C6C6C6);
-  border-bottom: 3px solid var(--dbim-wintergreen-dream, #162F6A);
+  border-bottom: 3px solid var(--dbim-wintergreen-dream, #0F5757);
   border-radius: .6rem;
   background: var(--dbim-white, #FFFFFF);
   overflow: hidden;
@@ -391,7 +391,7 @@ header.main-header .search-icon-btn {
   padding: .5rem;
   border: 0;
   background: transparent;
-  color: var(--dbim-wintergreen-dream, #162F6A);
+  color: var(--dbim-wintergreen-dream, #0F5757);
   cursor: pointer;
 }
 
@@ -807,7 +807,7 @@ header.main-header .government-name {
     font-family: "Noto Sans", "Noto Sans Devanagari", "Nirmala UI", "Mangal", sans-serif !important;
 }
 
-/* Personnel: second logo (Government of Meghalaya) sized like the Education site's second emblem */
+/* Second logo (Government of Meghalaya) sized like the Education site's second emblem */
 header.main-header .header-logos img.meghalaya-logo {
   display: block !important; width: 6.5rem !important; height: auto !important;
   max-width: 100% !important; object-fit: contain !important; flex: 0 0 auto !important;

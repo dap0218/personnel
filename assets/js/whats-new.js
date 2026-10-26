@@ -6,8 +6,8 @@
  *    and the rows are merged into ONE list.
  *  - Rows with Show = No are left out (they stay in the Excel file for the archive page).
  *  - Newest first, by the 'Date Added' column (dd-mm-yyyy). A row without a date takes the
- *    date of the row above it in the same sheet (sheets are kept newest-first), so always
- *    add new items at the TOP of their sheet.
+ *    date of the row above it in the same sheet (sheets are kept oldest-first), so always
+ *    add new items in the first empty row at the BOTTOM of their sheet.
  *
  * Needs SheetJS loaded first:  <script src="assets/js/xlsx.full.min.js"></script>
  * The items already written in #whatsNewList stay on the page if the Excel file cannot be
@@ -114,8 +114,8 @@
 
   // Columns: Title | Link | Type | New | Show | Date Added | Note | File Size
   function readItems(wb) {
-    var all = [], order = 0;
-    sheetNames(wb).forEach(function (sheet) {
+    var all = [];
+    sheetNames(wb).forEach(function (sheet, sheetIndex) {
       var list = [];
       rows(wb, sheet).forEach(function (r) {
         var title = str(r[0]), link = str(r[1]);
@@ -134,11 +134,16 @@
       list.forEach(function (it) { if (it.date == null) it.date = last; else last = it.date; });
       last = null;
       for (var i = list.length - 1; i >= 0; i--) { if (list[i].date == null) list[i].date = last; else last = list[i].date; }
-      list.forEach(function (it) { it.order = order++; all.push(it); });
+      // row position: the LAST row of a sheet is the newest
+      list.forEach(function (it, i) { it.sheet = sheetIndex; it.row = i; all.push(it); });
     });
     return all
       .filter(function (it) { return it.show; })
-      .sort(function (a, b) { return ((b.date || 0) - (a.date || 0)) || (a.order - b.order); })
+      .sort(function (a, b) {
+        return ((b.date || 0) - (a.date || 0))       // newest date first
+          || (a.sheet - b.sheet)                      // same date: Settings order of the sheets
+          || (b.row - a.row);                         // same sheet: lower row = newer
+      })
       .slice(0, MAX_ITEMS);
   }
 

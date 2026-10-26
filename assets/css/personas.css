@@ -331,14 +331,5 @@
 
 @media (max-width: 767.98px) {
   .ps-intro { flex-direction: column; align-items: flex-start; gap: 1.6rem; padding: 1.6rem; }
-  .ps-intro-img {                             /* square headshot */
-  flex: 0 0 20rem;
-  width: 20rem;
-  height: 20rem;
-  object-fit: cover;
-  object-position: center top;
-  background: var(--dbim-white);
-  border: 1px solid var(--dbim-grey-01);
-  border-radius: var(--dbim-border-radius-md);
-}
+  .ps-intro-img { flex-basis: 16rem; width: 16rem; height: 16rem; }   /* smaller headshot on phones */
 }

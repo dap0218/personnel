@@ -1,6 +1,6 @@
 /* =========================================================
-   PERSONA-PAGE.CSS — Department of Arts and Culture, Government of Meghalaya
-   "Services for You" pages in personas/ (Artist, Researcher, Student …).
+   PERSONA-PAGE.CSS — Personnel & Administrative Reforms Department, Government of Meghalaya
+   "Services for You" pages in personas/ (Job Seeker, Government Employee, Pensioner …).
    Uses the DBIM colour tokens from style.css. The top banner and
    breadcrumb come from inner-page.css.
 
@@ -24,7 +24,7 @@
   gap: 3.2rem;
   margin-bottom: 4rem;
   padding: 2.4rem;
-  background: var(--dbim-section-bg, #fbf4f4);
+  background: var(--dbim-section-bg, #F2FBFB);
   border: 1px solid var(--dbim-azureish-white);
   border-radius: 1.2rem;
 }
@@ -33,13 +33,13 @@
   width: 18rem;
   height: 18rem;
   object-fit: contain;
-  background: var(--dbim-section-bg-strong, #f3e1e1);
+  background: var(--dbim-section-bg-strong, #ECF9F9);
   border-radius: 50%;
 }
 .ps-kicker {
   margin: 0 0 .4rem;
   color: var(--dbim-text-accent);
-  font-size: 1.4rem;
+  font-size: var(--dbim-fs-p2);
   font-weight: 700;
   letter-spacing: .06em;
   text-transform: uppercase;
@@ -47,7 +47,7 @@
 .ps-title {
   margin: 0 0 1rem;
   color: var(--dbim-wintergreen-dream);
-  font-size: 3.2rem;
+  font-size: var(--dbim-fs-h1);
   font-weight: 700;
   line-height: 1.2;
 }
@@ -55,7 +55,7 @@
   max-width: 64rem;
   margin: 0;
   color: var(--dbim-dark-text);
-  font-size: 1.7rem;
+  font-size: var(--dbim-fs-p1);
   line-height: 1.6;
 }
 
@@ -66,7 +66,7 @@
   margin: 0 0 1.6rem;
   padding-left: 1.4rem;
   color: var(--dbim-wintergreen-dream);
-  font-size: 2.2rem;
+  font-size: var(--dbim-fs-h2);
   font-weight: 700;
   line-height: 1.3;
 }
@@ -117,7 +117,7 @@
 .ps-card-title {
   margin: 0;
   color: var(--dbim-wintergreen-dream);
-  font-size: 1.7rem !important;
+  font-size: var(--dbim-fs-p1) !important;
   font-weight: 700;
   line-height: 1.35;
 }
@@ -127,24 +127,24 @@
 .ps-card-text {
   margin: 0;
   color: #3D4043;
-  font-size: 1.4rem;
+  font-size: var(--dbim-fs-p2);
   line-height: 1.45;
 }
 .ps-tag {
   align-self: flex-start;
   margin-top: auto;
   padding: .2rem .8rem;
-  background: var(--dbim-section-bg-strong, #f3e1e1);
+  background: var(--dbim-section-bg-strong, #ECF9F9);
   border-radius: 99rem;
   color: var(--dbim-wintergreen-dream);
-  font-size: 1.2rem;
+  font-size: var(--dbim-fs-small);
   font-weight: 700;
   letter-spacing: .03em;
 }
 .ps-card:hover {
-  background: var(--dbim-surface-tint, #fdf8f8);
+  background: var(--dbim-surface-tint, #F8FDFD);
   border-color: var(--dbim-powder-blue);
-  box-shadow: 0 4px 12px rgba(var(--dbim-shadow-rgb, 60, 10, 10), .12);
+  box-shadow: 0 4px 12px rgba(var(--dbim-shadow-rgb, 15, 87, 87), .12);
 }
 .ps-card:hover::after { right: 1.4rem; }
 .ps-card:hover .ps-card-title a { text-decoration: underline; text-underline-offset: .2em; }
@@ -176,7 +176,7 @@
   border: 1px solid var(--dbim-azureish-white);
   border-radius: 1rem;
   color: var(--dbim-wintergreen-dream);
-  font-size: 1.5rem;
+  font-size: var(--dbim-fs-p1);
   font-weight: 700;
   line-height: 1.3;
   text-align: center;
@@ -187,12 +187,12 @@
   width: 7.2rem;
   height: 7.2rem;
   object-fit: contain;
-  background: var(--dbim-section-bg-strong, #f3e1e1);
+  background: var(--dbim-section-bg-strong, #ECF9F9);
   border-radius: 50%;
 }
 .ps-other:hover {
   border-color: var(--dbim-powder-blue);
-  box-shadow: 0 4px 12px rgba(var(--dbim-shadow-rgb, 60, 10, 10), .12);
+  box-shadow: 0 4px 12px rgba(var(--dbim-shadow-rgb, 15, 87, 87), .12);
   color: var(--dbim-wintergreen-dream);
   text-decoration: underline;
   transform: translateY(-2px);
@@ -203,13 +203,10 @@
 @media (max-width: 767.98px) {
   .ps-intro { flex-direction: column; text-align: center; gap: 1.6rem; padding: 2rem 1.6rem; }
   .ps-intro-img { flex-basis: 14rem; width: 14rem; height: 14rem; }
-  .ps-title { font-size: 2.6rem; }
-  .ps-intro-text { font-size: 1.6rem; }
   .ps-cards { grid-template-columns: 1fr; }
 }
 @media (max-width: 575.98px) {
   .persona-page { padding: 2.8rem 0 4rem; }
-  .ps-group-title { font-size: 2rem; }
   .ps-others ul { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
 }
 @media (prefers-reduced-motion: reduce) {

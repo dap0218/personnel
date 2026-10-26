@@ -1,6 +1,6 @@
 /* =========================================================
-   INNER-PAGE.CSS — Directorate of Sericulture and Weaving, Government of Meghalaya
-   Shared layout for all inner pages (About Us, Museum, Library, Festivals …).
+   INNER-PAGE.CSS — Personnel & Administrative Reforms Department, Government of Meghalaya
+   Shared layout for all inner pages (About Us, Acts and Rules, Notifications, RTI …).
    Uses the DBIM colour tokens from style.css, so load style.css first.
 
    1. Top banner (page title + breadcrumb)
@@ -10,7 +10,7 @@
    5. Tables
    6. Photo gallery
    7. Related-pages sidebar
-   8. Virtual museum tour (museum.html)
+   8. Virtual museum tour (legacy, not used on this site)
    9. Responsive + reduced motion
    ========================================================= */
 
@@ -32,7 +32,7 @@
 .banner_logo p {
   margin: 0;
   color: var(--dbim-white);
-  font-size: 2.8rem !important;
+  font-size: var(--dbim-fs-h2) !important;
   font-weight: 700;
   line-height: 1.25;
 }
@@ -44,7 +44,7 @@
   margin: 0;
   padding: 0;
   list-style: none;
-  font-size: 1.4rem;
+  font-size: var(--dbim-fs-p2);
 }
 .breadcrumb-trail li { display: inline-flex; align-items: center; color: var(--dbim-white); }
 .breadcrumb-trail li + li::before {
@@ -96,7 +96,7 @@
   margin: 0;
   padding-bottom: 1.2rem;
   color: var(--dbim-text-accent);
-  font-size: 3.2rem;
+  font-size: var(--dbim-fs-h1);
   font-weight: 700;
   line-height: 1.25;
 }
@@ -121,7 +121,7 @@
 .page-content .grid {
   display: block;
   color: var(--dbim-dark-text);
-  font-size: 1.6rem;
+  font-size: var(--dbim-fs-p1);
   line-height: 1.7;
 }
 .page-content .grid > * + * { margin-top: 1.6rem; }
@@ -129,14 +129,14 @@
 .page-content .grid h2 {
   margin: 3.2rem 0 1.2rem;
   color: var(--dbim-wintergreen-dream);
-  font-size: 2.2rem;
+  font-size: var(--dbim-fs-h2);
   font-weight: 700;
   line-height: 1.3;
 }
 .page-content .grid h3 {
   margin: 2.4rem 0 1rem;
   color: var(--dbim-wintergreen-dream);
-  font-size: 1.9rem;
+  font-size: var(--dbim-fs-h3);
   font-weight: 700;
   line-height: 1.35;
 }
@@ -145,7 +145,7 @@
 .page-content .grid h6 {
   margin: 2rem 0 .8rem;
   color: var(--dbim-deep-earthy-brown);
-  font-size: 1.7rem;
+  font-size: var(--dbim-fs-p1);
   font-weight: 700;
 }
 .page-content .grid > :first-child { margin-top: 0; }
@@ -194,7 +194,7 @@
   border-radius: .6rem;
 }
 
-/* Issue links on the Heritage of Meghalaya page */
+/* Inline row of link buttons (e.g. issues or years) */
 .page-content .issue-list { display: flex; flex-wrap: wrap; gap: 1rem; padding: 0 !important; list-style: none; }
 .page-content .issue-list li { margin: 0; }
 .page-content .issue-list a {
@@ -234,7 +234,7 @@
   width: 100%;
   margin: 0;
   border-collapse: collapse;
-  font-size: 1.5rem;
+  font-size: var(--dbim-fs-p1);
   line-height: 1.5;
 }
 .page-content .table-wrap caption {
@@ -292,7 +292,7 @@
 }
 .page-content .gallery a:hover,
 .page-content .image-gallery a:hover {
-  box-shadow: 0 6px 16px rgba(var(--dbim-shadow-rgb, 60, 10, 10), .15);
+  box-shadow: 0 6px 16px rgba(var(--dbim-shadow-rgb, 15, 87, 87), .15);
   transform: translateY(-2px);
 }
 .page-content .next { margin-top: 2.4rem; }
@@ -312,7 +312,7 @@
   margin: 0;
   padding: 1.4rem 1.6rem 1rem;
   color: var(--dbim-wintergreen-dream);
-  font-size: 1.7rem;
+  font-size: var(--dbim-fs-h3);
   font-weight: 700;
   line-height: 1.3;
 }
@@ -323,7 +323,7 @@
   display: block;
   padding: .9rem 1.6rem .9rem 3.2rem;
   color: var(--dbim-dark-text);
-  font-size: 1.5rem;
+  font-size: var(--dbim-fs-p1);
   line-height: 1.4;
   text-decoration: none;
   transition: background-color .2s ease, color .2s ease;
@@ -350,7 +350,7 @@
 }
 
 /* =========================================================
-   8. VIRTUAL MUSEUM TOUR (museum.html — old road-map layout)
+   8. VIRTUAL MUSEUM TOUR (legacy template block, not used on the Personnel site; safe to delete)
    ========================================================= */
 .page-content #museum-data { overflow-x: auto; }
 .page-content #museum-data table { width: auto; border-collapse: collapse; }
@@ -358,7 +358,7 @@
   padding-bottom: 1.2rem;
   caption-side: top;
   color: var(--dbim-wintergreen-dream);
-  font-size: 2rem;
+  font-size: var(--dbim-fs-h3);
   font-weight: 700;
   text-align: left;
 }
@@ -372,15 +372,11 @@
 @media (max-width: 991.98px) {
   .inner-page .waw-inner.has-sidebar { grid-template-columns: minmax(0, 1fr); }
   .page-sidebar { position: static; }
-  .banner_logo p { font-size: 2.4rem !important; }
-  .page-content .explore_head h1 { font-size: 2.8rem; }
 }
 @media (max-width: 575.98px) {
   .banner_inner { padding: 2.4rem 1.6rem; }
   .inner-page { padding: 2.8rem 0 4rem; }
   .inner-page .custom-container { padding: 0 1.6rem; }
-  .page-content .explore_head h1 { font-size: 2.4rem; }
-  .page-content .grid { font-size: 1.5rem; }
   .page-content .grid .img-left,
   .page-content .grid .img-right { float: none; max-width: 100%; margin: 0 0 1.6rem; }
   .page-content .gallery,
@@ -403,7 +399,7 @@
 .page-content .sitemap-group h2 {
   margin: 0 0 .4rem !important;
   color: var(--dbim-dark-text);
-  font-size: 2.2rem;
+  font-size: var(--dbim-fs-h2);
   font-weight: 600;
 }
 .page-content .sitemap-group ul { margin: 0 !important; padding: 0 0 0 4rem; list-style: none; }
@@ -413,17 +409,16 @@
   padding: 1.2rem 0;
   border-bottom: 1px solid var(--dbim-azureish-white);
   color: var(--dbim-dark-text);
-  font-size: 1.8rem;
+  font-size: var(--dbim-fs-p1);
   font-weight: 400;
   text-decoration: none;
 }
 .page-content .sitemap-group li > a:hover { color: var(--dbim-text-accent); text-decoration: underline; text-underline-offset: .2em; }
 .page-content .sitemap-group li > ul { padding-left: 3.2rem; }            /* sub-pages one step further in */
-.page-content .sitemap-group li > ul a { font-size: 1.6rem; padding: 1rem 0; }
+.page-content .sitemap-group li > ul a { font-size: var(--dbim-fs-p1); padding: 1rem 0; }
 @media (max-width: 575.98px) {
   .page-content .sitemap-group ul { padding-left: 1.6rem; }
   .page-content .sitemap-group li > ul { padding-left: 1.6rem; }
-  .page-content .sitemap-group li > a { font-size: 1.6rem; }
 }
 .page-content .sitemap-group h2 a { color: inherit; text-decoration: none; }
 .page-content .sitemap-group h2 a:hover { color: var(--dbim-text-accent); text-decoration: underline; text-underline-offset: .2em; }
@@ -451,7 +446,7 @@
   margin: 0 0 .6rem !important;
   padding: 0 !important;
   color: var(--dbim-wintergreen-dream);
-  font-size: 1.7rem;
+  font-size: var(--dbim-fs-h3);
   font-weight: 700;
   line-height: 1.4;
   text-align: left;
