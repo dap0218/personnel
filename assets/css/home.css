@@ -1,7 +1,5 @@
 /* =========================================================
-   HOME.CSS — Directorate of Sericulture and Weaving, Government of Meghalaya
-   Homepage-only styles. Base styles and the Chrome Yellow colour
-   tokens live in style.css, so load style.css first.
+   HOME.CSS — 
 
    1.  Hero banner
    2.  Announcements ticker
@@ -766,6 +764,18 @@
    }
    @media (prefers-reduced-motion: reduce) {
      .alert-item { transition: none; }
+   }
+   
+
+   /* Desktop: Services for You and Important Links are the same height.
+      The row stretches both columns; the persona card then grows to fill
+      its column, so both end at the same line. */
+   @media (min-width: 992px) {
+     .personas-section .row { align-items: stretch; }
+     .personas-section .row > [class*="col-"]:not(.personas-links) { display: flex; flex-direction: column; }
+     .personas-section .pc-slider { display: flex; flex-direction: column; flex: 1 1 auto; }
+     .personas-section .pc-track { flex: 1 1 auto; align-items: stretch; }
+     .personas-section .pc-slide-body { flex: 1 1 auto; }
    }
    
    /* Shared Important Links list */
