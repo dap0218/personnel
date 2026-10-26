@@ -4,11 +4,15 @@
    (row / col-lg-8 / col-lg-4); this file sets colours, type
    and spacing only, so it never fights the grid.
 
+   Font sizes use the DBIM v3.0 tokens from style.css (--dbim-fs-*),
+   so they follow the desktop/mobile type scale and still grow with
+   the A+ buttons. Line heights are unitless so they grow with them.
+
    Markup: components/footer.html
    Background: #771D1D (key colour) — white text ≈ 11:1
    ========================================================= */
 
-footer {
+   footer {
     width: 100%;
     margin: 0;
     padding: 0;
@@ -36,9 +40,9 @@ footer .footerbox .usefula {
     margin: 0 0 22px;
     padding: 0;
     color: #ffffff;
-    font-size: 16px;
+    font-size: var(--dbim-fs-p1);
     font-weight: 700;
-    line-height: 22px;
+    line-height: 1.4;
     letter-spacing: .04em;
     text-transform: uppercase;
 }
@@ -67,9 +71,9 @@ footer .footerbox ul.useful-links-list li a {
     align-items: center;
     gap: 10px;
     color: #ffffff;
-    font-size: 16px;
+    font-size: var(--dbim-fs-p1);
     font-weight: 400;
-    line-height: 25px;
+    line-height: 1.55;
     text-decoration: none;
     white-space: nowrap;          /* keeps "Website Policies" on one line */
 }
@@ -188,17 +192,17 @@ footer .footerbox .footer-bottom {
 footer .footerbox .footer-below-text {
     margin: 0;
     color: #ffffff;
-    font-size: 16px;
+    font-size: var(--dbim-fs-p1);
     font-weight: 400;
-    line-height: 23px;
+    line-height: 1.45;
 }
 
 footer .footerbox .footer-updated {
     margin: 0;
     color: #ffffff;
-    font-size: 14px;
+    font-size: var(--dbim-fs-p2);
     font-weight: 400;
-    line-height: 20px;
+    line-height: 1.45;
 }
 
 
@@ -244,8 +248,15 @@ footer .footer-back-top:hover {
 
 footer .footer-back-top .material-symbols-outlined {
     color: #ffffff;
-    font-size: 25px;
+    font-size: 2.5rem;
     line-height: 1;
+}
+
+footer .footer-back-top img {
+    display: block;
+    width: 24px;
+    height: 24px;
+    filter: brightness(0) invert(1);   /* turns any icon colour white */
 }
 
 
@@ -272,6 +283,7 @@ footer .footer-back-top .material-symbols-outlined {
 
 /* ==========================================
    MOBILE (up to 767px)
+   Font sizes come from the tokens' mobile scale — no px overrides here.
 ========================================== */
 
 @media (max-width: 767.98px) {
@@ -282,29 +294,15 @@ footer .footer-back-top .material-symbols-outlined {
 
     footer .footerbox .usefula {
         margin-bottom: 18px;
-        font-size: 15px;
-        line-height: 21px;
     }
 
     footer .footerbox ul.useful-links-list li a {
-        font-size: 15px;
-        line-height: 23px;
         white-space: normal;      /* allow wrapping on narrow screens */
     }
 
     footer .footerbox .government-logos a {
         width: 130px;
         height: 50px;
-    }
-
-    footer .footerbox .footer-below-text {
-        font-size: 14px;
-        line-height: 20px;
-    }
-
-    footer .footerbox .footer-updated {
-        font-size: 13px;
-        line-height: 19px;
     }
 
     footer .footer-back-top {
@@ -315,12 +313,6 @@ footer .footer-back-top .material-symbols-outlined {
     }
 }
 
-footer .footer-back-top img {
-    display: block;
-    width: 24px;
-    height: 24px;
-    filter: brightness(0) invert(1);   /* turns any icon colour white */
-}
 
 /* ==========================================
    SMALL MOBILE (up to 480px)
@@ -331,11 +323,6 @@ footer .footer-back-top img {
     footer .footerbox .government-logos a {
         width: calc(50% - 4px);
         height: 46px;
-    }
-
-    footer .footerbox .footer-below-text {
-        font-size: 13px;
-        line-height: 19px;
     }
 }
 

@@ -9,7 +9,7 @@
    4.  Section headings (one style for every homepage section)
    4b. Alternating section backgrounds
    5.  What's New + Key Offerings
-   6.  Sectors and Field Units
+   6.  Organisations (Sectors and Field Units / Associated Organisations)
    7.  Services for You (personas)
    8.  Important Links (includes Online Services)
    9.  Visit Us (location)
@@ -18,9 +18,9 @@
    12. Reduced motion
 
    Homepage order and backgrounds (section 4b):
-   Ticker (linen) → About Us (white) → What's New (tint)
-   → Personas + Important Links (white) → Sectors and Field Units (tint)
-   → Logo slider (white)
+   Ticker (linen) → About Us (white) → Key Offerings + What's New (tint)
+   → Services for You + Important Links (white)
+   → Associated Organisations (tint) → Logo slider (white)
    ========================================================= */
 
 /* FONT SIZES (DBIM v3.0): text takes its size from the base type scale
@@ -255,7 +255,7 @@
    
    /* =========================================================
       4. SECTION HEADINGS — one style for every homepage section
-      (About Us, What's New, Key Offerings, Sectors and Field Units,
+      (About Us, What's New, Key Offerings, Associated Organisations,
       Services for You, Important Links, Location)
       ========================================================= */
    .section-heading,
@@ -323,17 +323,18 @@
       4b. ALTERNATING SECTION BACKGROUNDS
       Set explicitly, in page order, so nothing (like the banner carousel
       or personas.css) can break the pattern:
-      Ticker (linen) → About Us (white) → What's New (tint)
-      → Personas + Important Links (white) → Sectors and Field Units (tint)
-      → Logo slider (white)
+      Ticker (linen) → About Us (white) → Key Offerings + What's New (tint)
+      → Services for You + Important Links (white)
+      → Associated Organisations (tint) → Logo slider (white)
       If you add a section, give it the next colour in the sequence.
       ========================================================= */
    #main-content > section.container                       { background: var(--dbim-white) !important; }       /* About Us — white */
-   #main-content > section.news-section                    { background: var(--dbim-section-bg) !important; }  /* What's New — tint */
-   #main-content > section.personas-section                { background: var(--dbim-white) !important; }       /* Personas + Important Links — white */
-   #main-content > section.organisations-section           { background: var(--dbim-section-bg) !important; }  /* Sectors and Field Units — tint */
+   #main-content > section.news-section                    { background: var(--dbim-section-bg) !important; }  /* Key Offerings + What's New — tint */
+   #main-content > section.personas-section                { background: var(--dbim-white) !important; }       /* Services for You + Important Links — white */
+   #main-content > section.organisations-section           { background: var(--dbim-section-bg) !important; }  /* Associated Organisations — tint */
    #main-content > section.important-links-slider-section  { background: var(--dbim-white) !important; }       /* Logo slider — white */
    /* Not on the current homepage; colours kept in case they are added back */
+   #main-content > section.services-links-section          { background: var(--dbim-section-bg) !important; }  /* Online Services — tint */
    #main-content > section.location-section                { background: var(--dbim-section-bg) !important; }  /* Visit Us — tint */
    
    /* Sections that sit inside .container (like About Us) need their own
@@ -504,8 +505,9 @@
    .ko-text a:focus-visible { outline: none !important; }
    
    /* =========================================================
-      6. SECTORS AND FIELD UNITS (last content section)
-      One colour per sector of the Directorate.
+      6. ORGANISATIONS (last content section, before the logo slider)
+      Sectors and Field Units / Associated Organisations.
+      One colour per wing (data-wing on each tile).
       ========================================================= */
    .organisations-section {
      --wing: var(--dbim-wintergreen-dream);
@@ -513,11 +515,14 @@
      padding: 4.8rem 0;
    }
    @media (max-width: 991.5px) { .organisations-section { padding: 4.4rem 0 3.6rem; } }
-   #sectors { scroll-margin-top: 12rem; }   /* a header menu link to #sectors lands below the sticky header */
+   #sectors,
+   #organisations { scroll-margin-top: 12rem; }   /* a header menu link to the section lands below the sticky header */
    
-   /* Sector colours (non-text, both ≥ 5:1 against white) */
-   [data-wing="sericulture"] { --wing: var(--dbim-wintergreen-dream); }
-   [data-wing="handloom"]    { --wing: var(--dbim-powder-blue); }
+   /* Wing colours (non-text, both ≥ 5:1 against white) */
+   [data-wing="sericulture"],
+   [data-wing="commission"] { --wing: var(--dbim-wintergreen-dream); }
+   [data-wing="handloom"],
+   [data-wing="department"] { --wing: var(--dbim-powder-blue); }
    
    .org-head {
      display: flex;
@@ -585,7 +590,7 @@
      border-radius: 1.2rem;
      transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
    }
-   /* thin sector-coloured edge */
+   /* thin wing-coloured edge */
    .org-tile::before {
      content: "";
      position: absolute;
@@ -673,7 +678,7 @@
      background: transparent !important;
      background-image: none !important;
    }
-   /* Slide card and image panel in the Chrome Yellow shades */
+   /* Slide card and image panel in the palette shades */
    .personas-section .pc-slide {
      background: var(--dbim-white) !important;
      border-color: var(--dbim-azureish-white) !important;
@@ -746,8 +751,9 @@
    .alert-item a:focus-visible { outline: 3px solid var(--dbim-info-blue); outline-offset: 3px; border-radius: .4rem; }
    .alert-item .file-type { font-weight: 400; }
    .alert-links { display: flex; flex-direction: column; gap: .6rem; }
-   /* Small note under a card's links (e.g. the extra CM Connect numbers) */
-   .alert-note {
+   /* Small note under a card's links (e.g. the CM Connect hours) */
+   .alert-note,
+   .alert-item > p.small {
      margin: .6rem 0 0;
      color: #3D4043;
      font-size: var(--dbim-fs-small);
@@ -1850,4 +1856,3 @@
      .org-tile:hover,
      .important-links-card:hover { transform: none; }
    }
-   
