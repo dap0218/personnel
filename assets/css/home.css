@@ -767,15 +767,23 @@
    }
    
 
-   /* Desktop: Services for You and Important Links are the same height.
-      The row stretches both columns; the persona card then grows to fill
-      its column, so both end at the same line. */
+   /* Desktop: the persona card sets the height. The Important Links column
+      takes the same height and its list scrolls inside; VIEW MORE stays at the bottom. */
    @media (min-width: 992px) {
      .personas-section .row { align-items: stretch; }
-     .personas-section .row > [class*="col-"]:not(.personas-links) { display: flex; flex-direction: column; }
-     .personas-section .pc-slider { display: flex; flex-direction: column; flex: 1 1 auto; }
-     .personas-section .pc-track { flex: 1 1 auto; align-items: stretch; }
-     .personas-section .pc-slide-body { flex: 1 1 auto; }
+     .personas-links .alerts-panel { flex: 1 1 0; min-height: 0; contain: size; }
+     .personas-links .alerts-list {
+       flex: 1 1 0;
+       min-height: 0;
+       overflow-y: auto;
+       padding-right: .6rem;
+       scrollbar-width: thin;
+       scrollbar-color: var(--dbim-columbia-blue) transparent;
+     }
+     .personas-links .alerts-list::-webkit-scrollbar { width: 6px; }
+     .personas-links .alerts-list::-webkit-scrollbar-thumb { background: var(--dbim-columbia-blue); border-radius: 3px; }
+     .personas-links .alerts-list:focus-visible { outline: 3px solid var(--dbim-info-blue); outline-offset: 2px; }
+     .personas-links .important-links-more { flex: 0 0 auto; }
    }
    
    /* Shared Important Links list */

@@ -6,14 +6,14 @@ APR='https://megedistrict.gov.in/directApply.do?serviceId=1287'
 def c(href,title,text,tag=None,ext=False):
     return (href,title,text,tag,ext)
 P=[
- ('employee','organisation.png','Government Employee','Government Employees','Service rules, notifications, forms and property returns for State Government employees.',[
+ ('employee','government_emp.png','Government Employee','Government Employees','Service rules, notifications, forms and property returns for State Government employees.',[
    ('Service rules and orders',[c('../rules.html','Rules, Orders and Circulars','Service rules, conduct and discipline rules, reservation roster'),
                                 c('../Rules/Handbook on Disciplinary Proceedings.pdf','Handbook on Disciplinary Proceedings, 2019 <span class="file-type">(PDF, 48 MB)</span>','Reference for disciplinary cases','PDF',True)]),
    ('Notifications',[c('../notifications.html','Notifications','Latest notifications of the Department'),
                      c('../notifications-a.html','Notifications archive','Older notifications, postings and transfers')]),
    ('Property returns and forms',[c(APR,'File your Annual Property Return','Online through the e-District portal','External website',True),
                                   c('../forms.html','Forms','Pension forms and other forms')])]),
- ('officer','vendor.png','IAS or MCS Officer','IAS and MCS Officers','Officer lists, postings, property returns and pension forms for IAS and MCS officers.',[
+ ('officer','policy_maker.png','IAS or MCS Officer','IAS and MCS Officers','Officer lists, postings, property returns and pension forms for IAS and MCS officers.',[
    ('Officer lists',[c('../ias-list.html','IAS List','IAS officers and their present posts'),
                      c('../mcs-list.html','MCS List','Meghalaya Civil Service officers')]),
    ('Property returns',[c('../ipr.html','Immovable Property Returns (IPR)','IPR filed by IAS, IPS and IFS officers'),
@@ -28,7 +28,7 @@ P=[
                                   c('../notifications/2024/PER-38-2021-91dtd1052024.pdf','Minimum and maximum age limits <span class="file-type">(PDF, 1.45 MB)</span>','For recruitment in certain Departments','PDF',True),
                                   c('../Rules/TimeBoundRecruitementSOP.pdf','Time-bound recruitment SOP <span class="file-type">(PDF, 679 KB)</span>','From vacancy to appointment','PDF',True)]),
    ('Public Service Commission',[c('https://mpsc.nic.in/','Meghalaya Public Service Commission','Examinations and recruitment to State services','External website',True)])]),
- ('pensioner','researcher.png','Pensioner','Pensioners','Pension forms and pension orders for retired IAS, MCS and MSS officers.',[
+ ('pensioner','pensioner.png','Pensioner','Pensioners','Pension forms and pension orders for retired IAS, MCS and MSS officers.',[
    ('Pension forms',[c('../forms-ias.html','IAS pension forms','Application, family details and other forms'),
                      c('../forms-mcs.html','MCS pension forms','Forms for MCS officers'),
                      c('../forms-mss.html','MSS and Steno pension forms','Forms for MSS and Stenographers')]),
