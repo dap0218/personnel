@@ -3717,3 +3717,11 @@
     html body header.main-header .logobox,
     html body header.main-header .header-logos { gap: 10px !important; }
   }
+
+  /* Personnel: search sits further left. The name wraps as
+     "Personnel & Administrative / Reforms Department" so the search can move closer. */
+  /* same width as "Arts and Culture Department", so the search lines up with the Arts and Culture site */
+  html body header.main-header .logotext { max-width: 32.8rem; }
+  @media (max-width: 1200px) {
+    html body header.main-header .logotext { max-width: none; }
+  }
