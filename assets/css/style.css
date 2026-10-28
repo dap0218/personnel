@@ -2883,13 +2883,15 @@
   }
   
   /* =========================================================
-     HEADER  (from reference stylesheet)
+     HEADER  (two tiers, same layout as the other department sites)
+     1. Top strip: flag + "Government of Meghalaya" | utility icons
+     2. Brand row: emblem + state logo + department name | search | Digital India
      ========================================================= */
   header.main-header,
   header.main-header *,
   header.main-header *::before,
   header.main-header *::after { box-sizing: border-box; }
-  
+
   header.main-header {
     position: relative;
     z-index: 100000 !important; /* above the navbar (99999) so the Bhashini dropdown isn't hidden */
@@ -2900,15 +2902,103 @@
     border-bottom: 1px solid var(--dbim-grey-01);
     font-family: var(--dbim-font-family);
   }
+
+  /* ---------- Tier 1: top strip ---------- */
+  header.main-header .header-top-strip {
+    position: relative;
+    overflow: visible !important;
+    background: var(--dbim-white);
+    border-bottom: 1px solid var(--dbim-grey-01);
+  }
+  header.main-header .header-top-inner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.6rem;
+    width: 100%;
+    max-width: 1800px;
+    min-height: 4.8rem;
+    margin-inline: auto;
+    padding: 0 clamp(2rem, 3vw, 5rem);
+    overflow: visible !important;
+  }
+  header.main-header .header-top-identity {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    min-width: 0;
+  }
+  header.main-header .header-flag {
+    display: block;
+    flex: 0 0 auto;
+    width: 3rem !important;
+    height: 2rem !important;
+    border: 1px solid var(--dbim-grey-01);
+  }
+  header.main-header .header-top-text {
+    color: var(--dbim-dark-text);
+    font-size: var(--dbim-fs-p1);
+    font-weight: 400;
+    line-height: 1.3;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  header.main-header .menutop {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    align-self: stretch;
+    margin: 0;
+    padding: 0;
+    overflow: visible !important;
+    list-style: none;
+  }
+  header.main-header .menutop > li {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+    overflow: visible !important;
+    border-left: 1px solid var(--dbim-grey-01);
+  }
+  header.main-header .menutop > li:first-child { border-left: 0; }
+
+  /* Utility buttons: 44px minimum touch target */
+  .site-access-button,
+  header.main-header .menutop a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 4.4rem;
+    min-height: 4.4rem;
+    margin: 0;
+    padding: .5rem;
+    border: 0;
+    border-radius: .4rem;
+    background: transparent !important;
+    color: var(--dbim-wintergreen-dream);
+    cursor: pointer;
+  }
+  .site-access-button img,
+  header.main-header .menutop img { display: block; width: 2.4rem; height: 2.4rem; object-fit: contain; }
+  .site-access-button:hover,
+  header.main-header .menutop a:hover { background: var(--dbim-azureish-white-bg) !important; }
+
+  /* ---------- Tier 2: brand row ---------- */
   header.main-header .header-brand-inner {
     position: relative;
     display: grid;
-    grid-template-columns: minmax(0, 1fr) clamp(24rem, 24vw, 34rem) auto;
+    /* search sits just after the department name; Digital India stays far right */
+    grid-template-columns: minmax(0, auto) clamp(26rem, 28vw, 38rem) minmax(12rem, 1fr);
     align-items: center;
-    gap: clamp(1.4rem, 2vw, 3rem);
+    gap: clamp(2rem, 2.5vw, 4rem);
     width: 100%;
     max-width: 1800px;
-    min-height: 14rem;
+    min-height: 15rem;
     margin-inline: auto;
     padding: 1.6rem clamp(2rem, 3vw, 5rem);
     overflow: visible !important;
@@ -2916,46 +3006,38 @@
   header.main-header .logobox {
     display: flex;
     align-items: center;
-    gap: clamp(1.2rem, 1.5vw, 2.2rem);
+    gap: clamp(1.6rem, 2.4vw, 3.6rem);
     min-width: 0;
     text-decoration: none;
   }
+  header.main-header .logobox:hover { text-decoration: none; }
   header.main-header .header-logos {
     display: flex;
     flex: 0 0 auto;
     align-items: center;
-    gap: clamp(1rem, 1.2vw, 1.8rem);
+    gap: clamp(1.6rem, 2.4vw, 3.6rem);
   }
   /* DBIM 5.5: logos must never be stretched */
-  header.main-header img.national-emblem { display: block; flex: 0 0 auto; width: 8rem; height: 12rem; object-fit: contain; }
-  header.main-header img.meghalaya-logo  { display: block; flex: 0 0 auto; width: 9rem; height: 9rem; object-fit: contain; }
-  
+  header.main-header img.national-emblem { display: block; flex: 0 0 auto; width: 6.4rem !important; height: 11rem !important; max-width: none !important; object-fit: contain; }
+  header.main-header img.meghalaya-logo  { display: block; flex: 0 0 auto; width: 9rem !important; height: 9rem !important; max-width: none !important; object-fit: contain; }
+
   header.main-header .logotext {
     display: flex;
     flex: 1 1 auto;
     flex-direction: column;
     justify-content: center;
-    gap: .15rem;
     min-width: 0;
-  }
-  header.main-header .government-name {
-    margin: 0;
-    color: var(--dbim-dark-text);
-    font-size: 2.2rem;
-    font-weight: 400;
-    line-height: 1.25;
-    overflow-wrap: break-word;
   }
   header.main-header .ministry-name,
   header.main-header .department-subtitle {
     margin: 0;
     color: var(--dbim-dark-text);
-    font-size: 2.6rem;
+    font-size: var(--dbim-fs-h2);
     font-weight: 700;
-    line-height: 1.2;
+    line-height: 1.25;
     overflow-wrap: break-word;
   }
-  
+
   /* Header search */
   header.main-header .searchposition { width: 100%; min-width: 0; margin: 0; }
   header.main-header form.search-box {
@@ -2980,7 +3062,7 @@
     box-shadow: none !important;
     background: transparent;
     color: var(--dbim-dark-text);
-    font-size: 1.6rem !important;
+    font-size: var(--dbim-fs-p1) !important;
   }
   header.main-header .search-box .form-control::placeholder { color: var(--dbim-grey-03); }
   header.main-header .search-icon-btn {
@@ -2993,69 +3075,25 @@
     margin: 0;
     padding: .5rem;
     border: 0;
-    border-left: 1px solid #e5e5e5;
+    border-left: 1px solid var(--dbim-grey-01);
     background: var(--dbim-white);
     color: var(--dbim-wintergreen-dream);
     cursor: pointer;
   }
   header.main-header .search-icon-btn img { display: block; width: 2.4rem; height: 2.4rem; object-fit: contain; }
   header.main-header .search-icon-btn:hover { background: var(--dbim-azureish-white-bg); }
-  
-  /* Right group: Digital India logo + utility icons */
-  header.main-header .header-right-group {
-    position: relative;
+
+  /* Digital India logo */
+  header.main-header a.header-right-logo {
     display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    gap: .5rem;
-    min-width: max-content;
-    overflow: visible !important;
-  }
-  header.main-header a.header-right-logo { display: flex; align-items: center; justify-content: center; flex: 0 0 auto; width: 14rem; }
-  header.main-header a.header-right-logo img { display: block; width: 100%; max-height: 6rem; object-fit: contain; }
-  
-  header.main-header .menutop {
-    position: relative;
-    display: flex;
-    align-items: center;
-    gap: .25rem;
-    margin: 0;
-    padding: 0;
-    overflow: visible !important;
-    list-style: none;
-  }
-  header.main-header .menutop > li {
-    position: relative;
-    display: flex;
-    align-items: center;
-    min-height: 4.8rem;
-    padding: 0 .45rem;
-    overflow: visible !important;
-    border-left: 1px solid var(--dbim-powder-blue);
-  }
-  header.main-header .menutop > li:first-child { border-left: 0; }
-  
-  /* Utility buttons: 44px minimum touch target */
-  .site-access-button,
-  header.main-header .menutop a {
-    display: inline-flex;
     align-items: center;
     justify-content: center;
-    min-width: 4.4rem;
-    min-height: 4.4rem;
-    margin: 0;
-    padding: .5rem;
-    border: 0;
-    border-radius: .4rem;
-    background: transparent !important;
-    color: var(--dbim-wintergreen-dream);
-    cursor: pointer;
+    justify-self: end;
+    flex: 0 0 auto;
+    width: 12rem;
   }
-  .site-access-button img,
-  header.main-header .menutop img { display: block; width: 2.4rem; height: 2.4rem; object-fit: contain; }
-  .site-access-button:hover,
-  header.main-header .menutop a:hover { background: var(--dbim-azureish-white-bg) !important; }
-  
+  header.main-header a.header-right-logo img { display: block; width: 100%; max-height: 6rem; object-fit: contain; }
+
   /* Header keyboard focus */
   header.main-header a:focus-visible,
   header.main-header button:focus-visible,
@@ -3064,98 +3102,39 @@
     outline-offset: 2px;
   }
   header.main-header .search-icon-btn:focus-visible { outline-offset: -3px; }
-  
+
   @media (max-width: 1200px) {
-    header.main-header .header-brand-inner { grid-template-columns: minmax(0, 1fr) auto; gap: 1.4rem; min-height: 0; padding: 1.4rem 2rem; }
+    header.main-header .header-top-inner { padding-inline: 2rem; }
+    header.main-header .header-brand-inner {
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 1.4rem 2rem;
+      min-height: 0;
+      padding: 1.4rem 2rem;
+    }
     header.main-header .searchposition { grid-column: 1 / -1; grid-row: 2; }
-    header.main-header img.national-emblem { width: 6rem; height: 8rem; }
-    header.main-header img.meghalaya-logo  { width: 6.5rem; height: 6.5rem; }
+    header.main-header img.national-emblem { width: 5rem !important; height: 8rem !important; }
+    header.main-header img.meghalaya-logo  { width: 6.5rem !important; height: 6.5rem !important; }
     header.main-header a.header-right-logo { width: 10rem; }
-    header.main-header .government-name { font-size: 1.9rem; }
-    header.main-header .ministry-name,
-    header.main-header .department-subtitle { font-size: 2.2rem; }
   }
   @media (max-width: 575.98px) {
-    header.main-header .header-brand-inner { grid-template-columns: minmax(0, 1fr); padding: 1.2rem; }
-    header.main-header .header-right-group { grid-row: 2; justify-content: space-between; min-width: 0; }
-    header.main-header .searchposition { grid-column: 1; grid-row: 3; }
-    header.main-header .logobox { gap: .8rem; }
-    header.main-header img.national-emblem { width: 4.2rem; height: 5.6rem; }
-    header.main-header img.meghalaya-logo  { width: 4.8rem; height: 4.8rem; }
-    header.main-header a.header-right-logo { width: 8rem; }
-    header.main-header .government-name { font-size: 1.6rem; }
-    header.main-header .ministry-name,
-    header.main-header .department-subtitle { font-size: 1.9rem; }
+    header.main-header .header-top-inner { padding-inline: 1.2rem; gap: .8rem; }
+    header.main-header .menutop > li { padding: 0 .2rem; }
+    header.main-header .header-brand-inner { padding: 1.2rem; gap: 1.2rem; }
+    header.main-header .logobox,
+    header.main-header .header-logos { gap: 1rem; }
+    header.main-header img.national-emblem { width: 3.6rem !important; height: 5.6rem !important; }
+    header.main-header img.meghalaya-logo  { width: 4.8rem !important; height: 4.8rem !important; }
+    header.main-header a.header-right-logo { width: 7.5rem; }
     header.main-header form.search-box { height: 4.5rem; }
   }
-  
-  /* =========================================================
-     HEADER TOP STRIP – Government of Meghalaya line with skip, language
-     and accessibility controls on the right. Not used by the current
-     header (theme.css hides .gov-strip); kept for older templates.
-     ========================================================= */
-  header.main-header .gov-strip {
-    background: var(--dbim-white);
-    border-bottom: 1px solid var(--dbim-grey-01);   /* thin grey line under the strip */
-  }
-  header.main-header .gov-strip-inner {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    gap: .4rem 1.6rem;
-    width: 100%;
-    max-width: 1800px;
-    min-height: 4.8rem;
-    margin-inline: auto;
-    padding: 0 clamp(2rem, 3vw, 5rem);
-  }
-  header.main-header .gov-strip-parent {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin: 0;
-    font-size: 1.5rem !important;
-    font-weight: 500;
-    line-height: 1.4;
-  }
-  header.main-header .gov-strip-flag {
-    display: block;
-    flex: 0 0 auto;
-    width: 3.6rem;
-    height: 2.4rem;
-    box-shadow: 0 0 0 1px var(--dbim-grey-01);   /* thin outline so the white band shows on the white strip */
-  }
-  header.main-header .gov-strip-parent a {
-    color: var(--dbim-dark-text);
-    text-decoration: none;
-  }
-  header.main-header .gov-strip-parent a:hover { color: var(--dbim-wintergreen-dream); text-decoration: underline; }
-  header.main-header .gov-strip .menutop { margin-left: auto; }   /* stays on the right even when the strip wraps */
-  header.main-header .gov-strip .menutop > li { min-height: 4.6rem; border-left-color: var(--dbim-grey-01); }
-  
-  /* Brand row: the Department name, with a smaller line under it */
-  header.main-header .header-brand-inner { min-height: 12rem; }
-  header.main-header .org-subtitle {
-    margin: .2rem 0 0;
-    color: var(--dbim-grey-03);
-    font-size: 1.6rem;
-    font-weight: 500;
-    line-height: 1.3;
-  }
-  header.main-header .header-right-group { min-width: 0; }
-  
-  @media (max-width: 1200px) {
-    header.main-header .gov-strip-inner { padding: 0 2rem; }
-    header.main-header .org-subtitle { font-size: 1.5rem; }
-  }
-  @media (max-width: 575.98px) {
-    header.main-header .gov-strip-inner { padding: .2rem 1.2rem; }
-    header.main-header .gov-strip-parent { font-size: 1.3rem !important; }
-    header.main-header .gov-strip .menutop > li { min-height: 4.4rem; padding: 0 .2rem; }
-    header.main-header .org-subtitle { font-size: 1.3rem; }
-    header.main-header .header-right-group { justify-content: flex-start; }
-  }
+
+  /* Language icon shown until the Bhashini plugin loads */
+  header.main-header .bhashini_dropdown { display: flex; align-items: center; }
+  header.main-header .lang-fallback { display: none; align-items: center; gap: .2rem; }
+  header.main-header .lang-fallback img { width: 2.6rem; height: 2.6rem; }
+  header.main-header .lang-fallback .lang-caret { width: 1.4rem; height: 1.4rem; }
+  header.main-header .bhashini-plugin-container:empty { display: none; }
+  header.main-header .bhashini-plugin-container:empty + .lang-fallback { display: inline-flex; }
   
   /* =========================================================
      BHASHINI LANGUAGE SELECTOR + TRANSLATE POPUP
@@ -3687,85 +3666,54 @@
     .sitemap-list > li { margin-bottom: 22px !important; }
     .sitemap-list > li > ul { padding-left: 16px !important; }
   }
-  
+
   /* =========================================================
-     HEADER – one row, as on megeducation.gov.in (replaces the two-row header above)
+     HEADER SIZE LOCK (Personnel)
+     Fixed pixel sizes with !important so other stylesheets on this
+     site (for example theme.css) cannot change them. Same sizes as
+     the Education and Arts and Culture headers.
      ========================================================= */
-  header.main-header.edu-header {
-    /* above the menu bar (z-index 99999) so the Bhashini language list opens over it, not behind it */
-    display: block; position: relative; z-index: 100000 !important; overflow: visible !important; background: var(--dbim-white);
-    border-bottom: 1px solid var(--dbim-grey-01); font-family: "Noto Sans", sans-serif;
+  html body header.main-header .ministry-name {
+    font-size: 24px !important;
+    font-weight: 700 !important;
+    line-height: 1.25 !important;
   }
-  .edu-header-inner {
-    position: relative; overflow: visible; display: flex; align-items: center; justify-content: space-between; gap: 2.4rem;
-    max-width: 132rem; min-height: 15rem; margin: 0 auto; padding: 1.8rem 4rem;
+  html body header.main-header .header-top-text { font-size: 16px !important; }
+  html body header.main-header img.national-emblem { width: 64px !important; height: 110px !important; max-width: none !important; max-height: none !important; }
+  html body header.main-header img.meghalaya-logo  { width: 90px !important; height: 90px !important; max-width: none !important; max-height: none !important; }
+  @media (max-width: 1200px) {
+    html body header.main-header img.national-emblem { width: 50px !important; height: 80px !important; }
+    html body header.main-header img.meghalaya-logo  { width: 65px !important; height: 65px !important; }
   }
-  .edu-logobox { display: flex; align-items: center; gap: 2rem; min-width: 0; color: var(--dbim-dark-text); text-decoration: none; }
-  .edu-logobox:hover { color: var(--dbim-dark-text); }
-  .edu-emblem { display: block; width: auto; height: 11rem; flex: 0 0 auto; object-fit: contain; }
-  .edu-state-logo { display: block; width: auto; height: 9rem; flex: 0 0 auto; object-fit: contain; }
-  .edu-logotext { display: flex; flex-direction: column; gap: .2rem; min-width: 0; margin-left: .8rem; }
-  .edu-govname { font-size: 2.2rem; font-weight: 400; line-height: 1.25; color: var(--dbim-dark-text); }
-  .edu-deptname { font-size: 2.4rem; font-weight: 700; line-height: 1.2; color: var(--dbim-dark-text); overflow-wrap: anywhere; }
-  
-  .edu-search { flex: 0 1 31rem; min-width: 22rem; }
-  .edu-search-box {
-    display: flex; align-items: stretch; height: 4.8rem; margin: 0;
-    border: 1px solid var(--dbim-grey-01); border-bottom: 3px solid var(--dbim-wintergreen-dream);
-    border-radius: .6rem; background: var(--dbim-white); overflow: hidden;
+  @media (max-width: 991.98px) {
+    html body header.main-header .ministry-name { font-size: 20px !important; }
+    html body header.main-header .header-top-text { font-size: 14px !important; }
   }
-  .edu-search-box .form-control {
-    flex: 1 1 auto; min-width: 0; height: 100%; padding: 0 1.4rem; border: 0 !important; box-shadow: none !important;
-    background: transparent; color: var(--dbim-dark-text); font-size: 1.7rem !important;
+  @media (max-width: 575.98px) {
+    html body header.main-header img.national-emblem { width: 36px !important; height: 56px !important; }
+    html body header.main-header img.meghalaya-logo  { width: 48px !important; height: 48px !important; }
   }
-  .edu-search-box .form-control::placeholder { color: var(--dbim-grey-03); opacity: 1; }
-  .edu-search-btn {
-    display: flex; align-items: center; justify-content: center; flex: 0 0 4.8rem;
-    border: 0; border-left: 1px solid var(--dbim-grey-01); background: transparent; cursor: pointer;
+
+  /* Lock the rest of the header to match the other sites:
+     logo spacing, search box shape and the search button divider */
+  html body header.main-header .logobox { gap: 36px !important; }
+  html body header.main-header .header-logos { gap: 36px !important; }
+  html body header.main-header img.meghalaya-logo,
+  html body header.main-header img.national-emblem { padding: 0 !important; margin: 0 !important; background: none !important; border: 0 !important; border-radius: 0 !important; }
+  html body header.main-header form.search-box {
+    height: 48px !important;
+    border: 1px solid var(--dbim-grey-01) !important;
+    border-bottom: 3px solid var(--dbim-wintergreen-dream) !important;
+    border-radius: 12px 12px 0 0 !important;
   }
-  .edu-search-btn img { width: 2.4rem; height: 2.4rem; }
-  .edu-search-btn:hover { background: var(--dbim-azureish-white-bg); }
-  
-  .edu-right { display: flex; align-items: center; gap: 3.2rem; flex: 0 0 auto; }
-  .edu-digital-india img { display: block; width: 11rem; height: auto; }
-  .edu-tools { display: flex; align-items: center; margin: 0; padding: 0; list-style: none; }
-  .edu-tools > li { display: flex; align-items: center; min-height: 5rem; padding: 0 1.4rem; border-left: 1px solid var(--dbim-wintergreen-dream); }
-  .edu-tools > li:first-child { border-left: 0; padding-left: 0; }
-  .edu-tools .site-access-button {
-    display: inline-flex; align-items: center; justify-content: center; min-width: 4rem; min-height: 4rem;
-    padding: .4rem; border: 0; border-radius: .4rem; background: transparent; cursor: pointer;
+  html body header.main-header .search-icon-btn {
+    flex: 0 0 48px !important;
+    width: 48px !important;
+    border: 0 !important;
+    border-left: 1px solid var(--dbim-grey-01) !important;
+    background: var(--dbim-white) !important;
   }
-  .edu-tools .site-access-button img { width: 2.6rem; height: 2.6rem; }
-  .edu-tools .site-access-button:hover { background: var(--dbim-azureish-white-bg) !important; }
-  .edu-header .bhashini_dropdown { display: flex; align-items: center; }
-  .edu-lang-fallback { display: none; align-items: center; gap: .2rem; }
-  .edu-lang-fallback img { width: 3rem; height: 3rem; }
-  .edu-lang-fallback .edu-caret { width: 1.4rem; height: 1.4rem; }
-  .edu-header .bhashini-plugin-container:empty { display: none; }
-  .edu-header .bhashini-plugin-container:empty + .edu-lang-fallback { display: inline-flex; }
-  
-  /* Tablet: name and tools on row one, search full width below */
-  @media (max-width: 1100px) {
-    .edu-header-inner { flex-wrap: wrap; min-height: 0; padding: 1.6rem 2rem; gap: 1.6rem 2rem; }
-    .edu-logobox { flex: 1 1 auto; order: 1; gap: 1.2rem; }
-    .edu-right { order: 2; gap: 2rem; }
-    .edu-search { order: 3; flex: 1 1 100%; min-width: 0; }
-    .edu-emblem { height: 8rem; }
-    .edu-state-logo { height: 6.6rem; }
-    .edu-govname { font-size: 1.8rem; }
-    .edu-deptname { font-size: 2.1rem; }
+  @media (max-width: 575.98px) {
+    html body header.main-header .logobox,
+    html body header.main-header .header-logos { gap: 10px !important; }
   }
-  /* Phone */
-  @media (max-width: 640px) {
-    .edu-header-inner { padding: 1.2rem; gap: 1.2rem; }
-    .edu-logobox { flex: 1 1 100%; gap: .8rem; }
-    .edu-logotext { margin-left: .2rem; }
-    .edu-emblem { height: 6rem; }
-    .edu-state-logo { height: 4.8rem; }
-    .edu-govname { font-size: 1.4rem; }
-    .edu-deptname { font-size: 1.6rem; }
-    .edu-right { flex: 1 1 100%; justify-content: space-between; order: 3; }
-    .edu-search { order: 2; }
-    .edu-digital-india img { width: 9rem; }
-  }
-  

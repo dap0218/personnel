@@ -1,36 +1,23 @@
-<header class="main-header edu-header">
-    <div class="edu-header-inner">
-        <a href="index.html" class="edu-logobox"
-           aria-label="Personnel and Administrative Reforms Department, Government of Meghalaya - home">
-            <img src="/assets/images/national_emblem.svg" alt="State Emblem of India" class="edu-emblem">
-            <img src="/assets/images/Gov_Of_Meghalaya_Logo.png" alt="Government of Meghalaya" class="edu-state-logo">
-            <span class="edu-logotext">
-                <span class="edu-govname">Government of Meghalaya</span>
-                <span class="edu-deptname">Personnel &amp; Administrative Reforms Department</span>
-            </span>
-        </a>
+<header class="main-header">
 
-        <div class="edu-search">
-            <form class="edu-search-box" id="siteSearchForm" method="get"
-                  action="https://www.google.com/search" target="_blank" autocomplete="off" role="search">
-                <input type="search" class="form-control" id="siteSearchInput"
-                       name="q" placeholder="Search..." maxlength="200"
-                       aria-label="Search the Personnel and Administrative Reforms Department website" required>
-                <input type="hidden" name="sitesearch" value="personnel.meghalaya.gov.in">
-                <button type="submit" class="edu-search-btn" aria-label="Search">
-                    <img src="/assets/icons/search.svg" alt="" aria-hidden="true">
-                </button>
-            </form>
-        </div>
+    <!-- Tier 1: top strip (parent government + utility controls) -->
+    <div class="header-top-strip">
+        <div class="header-top-inner container-fluid">
+            <div class="header-top-identity">
+                <svg class="header-flag" width="30" height="20" viewBox="0 0 30 20" role="img" aria-label="Flag of India">
+                    <rect width="30" height="20" fill="#FFFFFF"/>
+                    <rect width="30" height="6.67" fill="#FF9933"/>
+                    <rect y="13.33" width="30" height="6.67" fill="#138808"/>
+                    <circle cx="15" cy="10" r="2.6" fill="none" stroke="#000080" stroke-width="0.6"/>
+                    <circle cx="15" cy="10" r="0.5" fill="#000080"/>
+                </svg>
+                <span class="header-top-text">Government of Meghalaya</span>
+            </div>
 
-        <div class="edu-right">
-            <a href="https://www.digitalindia.gov.in/" class="edu-digital-india"
-               target="_blank" rel="noopener noreferrer" aria-label="Digital India (opens in a new window)">
-                <img src="/assets/images/digitalIndia.svg" alt="Digital India">
-            </a>
-            <ul class="edu-tools" aria-label="Accessibility and language controls">
+            <ul class="menutop" aria-label="Accessibility and language controls">
                 <li>
-                    <a href="#main-content" class="site-access-button" aria-label="Skip to main content" title="Skip to main content">
+                    <a href="#main-content" class="site-access-button"
+                       aria-label="Skip to main content" title="Skip to main content">
                         <img src="/assets/icons/skip_to_content.svg" alt="" aria-hidden="true">
                     </a>
                 </li>
@@ -38,9 +25,9 @@
                     <div class="bhashini_dropdown">
                         <!-- The Bhashini plugin draws the language menu here. The icon below shows only until it loads. -->
                         <div class="bhashini-plugin-container"></div>
-                        <span class="edu-lang-fallback" aria-hidden="true">
+                        <span class="lang-fallback" aria-hidden="true">
                             <img src="/assets/icons/language.svg" alt="">
-                            <img src="/assets/icons/down.svg" alt="" class="edu-caret">
+                            <img src="/assets/icons/down.svg" alt="" class="lang-caret">
                         </span>
                     </div>
                 </li>
@@ -53,6 +40,44 @@
                     </button>
                 </li>
             </ul>
+        </div>
+    </div>
+
+    <!-- Tier 2: brand row (logos + department name, search, Digital India) -->
+    <div class="header-brand-row">
+        <div class="header-brand-inner container-fluid">
+            <a href="index.html" class="logobox"
+               aria-label="Personnel and Administrative Reforms Department, Government of Meghalaya - home">
+                <div class="header-logos">
+                    <img src="/assets/images/national_emblem.svg"
+                         alt="State Emblem of India" class="national-emblem">
+                    <img src="/assets/images/Gov_Of_Meghalaya_Logo.png"
+                         alt="Government of Meghalaya" class="meghalaya-logo">
+                </div>
+                <span class="logotext">
+                    <span class="ministry-name">Personnel &amp; Administrative Reforms Department</span>
+                </span>
+            </a>
+
+            <div class="searchposition">
+                <form class="search-box" id="siteSearchForm" method="get"
+                      action="https://www.google.com/search" target="_blank"
+                      autocomplete="off" role="search">
+                    <input type="search" class="form-control" id="siteSearchInput"
+                           name="q" placeholder="Search..." maxlength="200"
+                           aria-label="Search the Personnel and Administrative Reforms Department website" required>
+                    <input type="hidden" name="sitesearch" value="personnel.meghalaya.gov.in">
+                    <button type="submit" class="search-icon-btn" aria-label="Search">
+                        <img src="/assets/icons/search.svg" alt="" aria-hidden="true">
+                    </button>
+                </form>
+            </div>
+
+            <a href="https://www.digitalindia.gov.in/" class="header-right-logo"
+               target="_blank" rel="noopener noreferrer"
+               aria-label="Digital India (opens in a new window)">
+                <img src="/assets/images/digitalIndia.svg" alt="Digital India">
+            </a>
         </div>
     </div>
 </header>
@@ -71,12 +96,6 @@
             <span></span>
         </button>
 
-        <!-- Grouped by who the page is for:
-             - About     = who we are: the Department, its set-up and who's who.
-             - Officers  = everything for IAS and MCS officers: officer lists and property returns.
-             - Documents = what we publish: rules, notifications, forms.
-             - Contact   = how to reach us: contact, grievances, RTI, help.
-             Sitemap is in the footer, so it is not repeated here. -->
         <ul class="main-menu" id="mainMenu">
 
             <!-- Home -->

@@ -57,7 +57,7 @@ TEMPLATE_HEAD = """<!DOCTYPE html>
     <link rel="canonical" href="https://personnel.meghalaya.gov.in/{fname}">
     <link href="../assets/css/boostrap.min.css" rel="stylesheet">
     <link href="../assets/css/style.css" rel="stylesheet">
-    <link href="../assets/css/theme.css" rel="stylesheet">
+
     <link href="../assets/css/footer.css" rel="stylesheet">
     <link href="../assets/css/accessibility-style.css" rel="stylesheet">
     <link href="../assets/css/inner-page.css" rel="stylesheet">
