@@ -24,7 +24,7 @@
   gap: 3.2rem;
   margin-bottom: 4rem;
   padding: 2.4rem;
-  background: var(--dbim-section-bg, #F2FBFB);
+  background: var(--dbim-section-bg, #EFF4FF);
   border: 1px solid var(--dbim-azureish-white);
   border-radius: 1.2rem;
 }
@@ -33,7 +33,7 @@
   width: 18rem;
   height: 18rem;
   object-fit: contain;
-  background: var(--dbim-section-bg-strong, #ECF9F9);
+  background: var(--dbim-section-bg-strong, #E9EFFF);
   border-radius: 50%;
 }
 .ps-kicker {
@@ -134,7 +134,7 @@
   align-self: flex-start;
   margin-top: auto;
   padding: .2rem .8rem;
-  background: var(--dbim-section-bg-strong, #ECF9F9);
+  background: var(--dbim-section-bg-strong, #E9EFFF);
   border-radius: 99rem;
   color: var(--dbim-wintergreen-dream);
   font-size: var(--dbim-fs-small);
@@ -142,9 +142,9 @@
   letter-spacing: .03em;
 }
 .ps-card:hover {
-  background: var(--dbim-surface-tint, #F8FDFD);
+  background: var(--dbim-surface-tint, #F7F9FF);
   border-color: var(--dbim-powder-blue);
-  box-shadow: 0 4px 12px rgba(var(--dbim-shadow-rgb, 15, 87, 87), .12);
+  box-shadow: 0 4px 12px rgba(var(--dbim-shadow-rgb, 22, 47, 106), .12);
 }
 .ps-card:hover::after { right: 1.4rem; }
 .ps-card:hover .ps-card-title a { text-decoration: underline; text-underline-offset: .2em; }
@@ -187,12 +187,12 @@
   width: 7.2rem;
   height: 7.2rem;
   object-fit: contain;
-  background: var(--dbim-section-bg-strong, #ECF9F9);
+  background: var(--dbim-section-bg-strong, #E9EFFF);
   border-radius: 50%;
 }
 .ps-other:hover {
   border-color: var(--dbim-powder-blue);
-  box-shadow: 0 4px 12px rgba(var(--dbim-shadow-rgb, 15, 87, 87), .12);
+  box-shadow: 0 4px 12px rgba(var(--dbim-shadow-rgb, 22, 47, 106), .12);
   color: var(--dbim-wintergreen-dream);
   text-decoration: underline;
   transform: translateY(-2px);
@@ -212,4 +212,20 @@
 @media (prefers-reduced-motion: reduce) {
   .ps-card, .ps-card::after, .ps-other { transition: none; }
   .ps-other:hover { transform: none; }
+}
+
+/* 6. SERVICES PAGE (services.html): all personas on one page */
+.ps-jump { margin: 0 0 4.8rem; padding-top: 0; border-top: 0; }   /* persona jump bar under the intro */
+.ps-group { scroll-margin-top: 8rem; }                             /* #employee etc. land below the sticky menu */
+.ps-group-intro {
+  margin: -.8rem 0 1.6rem;
+  color: #3D4043;
+  font-size: var(--dbim-fs-p1);
+  line-height: 1.5;
+}
+.ps-card .file-type {
+  color: #4A4A4A;
+  font-size: .85em;
+  font-weight: 400;
+  white-space: nowrap;
 }

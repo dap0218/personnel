@@ -1,0 +1,68 @@
+/* Our Organisations page (organisations.html): grouped cards.
+   Uses the DBIM colours defined in style.css. */
+.org-group-title {
+  margin: 3.2rem 0 1.6rem;
+  padding-bottom: .8rem;
+  color: var(--dbim-wintergreen-dream, #162F6A);
+  font-size: 2rem;
+  font-weight: 700;
+  border-bottom: 2px solid var(--dbim-wintergreen-dream, #162F6A);
+}
+.org-group-title:first-of-type { margin-top: 2.4rem; }
+
+.org-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.org-card {
+  display: flex;
+  flex-direction: column;
+  gap: .8rem;
+  padding: 2rem 2rem 2rem 2.4rem;
+  background: var(--dbim-white, #fff);
+  border: 1px solid var(--dbim-columbia-blue, #5279D7);
+  border-left: 5px solid var(--dbim-wintergreen-dream, #162F6A);
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(22, 47, 106, .08);
+}
+
+.org-card-abbr {
+  align-self: flex-start;
+  padding: .2rem 1rem;
+  background: var(--dbim-azureish-white-bg, #D2DFFF);
+  color: var(--dbim-wintergreen-dream, #162F6A);
+  border-radius: 4px;
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: .04em;
+}
+
+.org-card-title {
+  margin: 0;
+  color: var(--dbim-dark-text, #150202);
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.org-card p { margin: 0; line-height: 1.5; }
+
+.org-card-link {
+  margin-top: auto;
+  padding-top: .8rem;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: .3rem;
+}
+
+@media (max-width: 991.98px) {
+  .org-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 575.98px) {
+  .org-list { grid-template-columns: 1fr; }
+}

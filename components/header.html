@@ -1,84 +1,66 @@
 <header class="main-header">
+    <div class="header-row container-fluid">
 
-    <!-- Tier 1: top strip (parent government + utility controls) -->
-    <div class="header-top-strip">
-        <div class="header-top-inner container-fluid">
-            <div class="header-top-identity">
-                <svg class="header-flag" width="30" height="20" viewBox="0 0 30 20" role="img" aria-label="Flag of India">
-                    <rect width="30" height="20" fill="#FFFFFF"/>
-                    <rect width="30" height="6.67" fill="#FF9933"/>
-                    <rect y="13.33" width="30" height="6.67" fill="#138808"/>
-                    <circle cx="15" cy="10" r="2.6" fill="none" stroke="#000080" stroke-width="0.6"/>
-                    <circle cx="15" cy="10" r="0.5" fill="#000080"/>
-                </svg>
-                <span class="header-top-text">Government of Meghalaya</span>
+        <!-- Logo lockup -->
+        <a href="index.html" class="logobox"
+           aria-label="Personnel and Administrative Reforms Department, Government of Meghalaya - home">
+            <div class="header-logos">
+                <!--img src="/assets/images/national_emblem.svg"
+                     alt="State Emblem of India" class="national-emblem"-->
+                <img src="/assets/images/Gov_Of_Meghalaya_Logo.png"
+                     alt="Government of Meghalaya" class="meghalaya-logo">
             </div>
+            <span class="logotext">
+                <span class="parent-gov">Government of Meghalaya</span>
+                <span class="ministry-name">Personnel &amp; Administrative Reforms Department</span>
+            </span>
+        </a>
 
-            <ul class="menutop" aria-label="Accessibility and language controls">
-                <li>
-                    <a href="#main-content" class="site-access-button"
-                       aria-label="Skip to main content" title="Skip to main content">
-                        <img src="/assets/icons/skip_to_content.svg" alt="" aria-hidden="true">
-                    </a>
-                </li>
-                <li>
-                    <div class="bhashini_dropdown">
-                        <!-- The Bhashini plugin draws the language menu here. The icon below shows only until it loads. -->
-                        <div class="bhashini-plugin-container"></div>
-                        <span class="lang-fallback" aria-hidden="true">
-                            <img src="/assets/icons/language.svg" alt="">
-                            <img src="/assets/icons/down.svg" alt="" class="lang-caret">
-                        </span>
-                    </div>
-                </li>
-                <li>
-                    <button type="button" class="site-access-button"
-                            id="uw-widget-custom-trigger2" aria-haspopup="dialog"
-                            aria-controls="uw-main" aria-expanded="false"
-                            aria-label="Accessibility options" title="Accessibility options">
-                        <img src="/assets/icons/accessibility.svg" alt="" aria-hidden="true">
-                    </button>
-                </li>
-            </ul>
+        <!-- Search -->
+        <div class="searchposition">
+            <form class="search-box" id="siteSearchForm" method="get"
+                  action="https://www.google.com/search" target="_blank"
+                  autocomplete="off" role="search">
+                <input type="search" class="form-control" id="siteSearchInput"
+                       name="q" placeholder="Search..." maxlength="200"
+                       aria-label="Search the Personnel and Administrative Reforms Department website" required>
+                <input type="hidden" name="sitesearch" value="personnel.meghalaya.gov.in">
+                <button type="submit" class="search-icon-btn" aria-label="Search (opens in a new window)">
+                    <img src="/assets/icons/search.svg" alt="" aria-hidden="true">
+                </button>
+            </form>
         </div>
-    </div>
 
-    <!-- Tier 2: brand row (logos + department name, search, Digital India) -->
-    <div class="header-brand-row">
-        <div class="header-brand-inner container-fluid">
-            <a href="index.html" class="logobox"
-               aria-label="Personnel and Administrative Reforms Department, Government of Meghalaya - home">
-                <div class="header-logos">
-                    <img src="/assets/images/national_emblem.svg"
-                         alt="State Emblem of India" class="national-emblem">
-                    <img src="/assets/images/Gov_Of_Meghalaya_Logo.png"
-                         alt="Government of Meghalaya" class="meghalaya-logo">
+        <!-- Digital India -->
+        <a href="https://www.digitalindia.gov.in/" class="header-right-logo"
+           target="_blank" rel="noopener noreferrer"
+           aria-label="Digital India (opens in a new window)">
+            <img src="/assets/images/digitalIndia.svg" alt="Digital India">
+        </a>
+
+        <!-- Skip / language / accessibility (DBIM 5.4; language selection is mandatory under DBIM 7.5.1) -->
+        <ul class="menutop" aria-label="Accessibility and language controls">
+            <li>
+                <a href="#main-content" class="site-access-button"
+                   aria-label="Skip to main content" title="Skip to main content">
+                    <img src="/assets/icons/skip_to_content.svg" alt="" aria-hidden="true">
+                </a>
+            </li>
+            <li>
+                <div class="bhashini_dropdown">
+                    <div class="bhashini-plugin-container"></div>
                 </div>
-                <span class="logotext">
-                    <span class="ministry-name">Personnel &amp; Administrative Reforms Department</span>
-                </span>
-            </a>
+            </li>
+            <li>
+                <button type="button" class="site-access-button"
+                        id="uw-widget-custom-trigger2" aria-haspopup="dialog"
+                        aria-controls="uw-main" aria-expanded="false"
+                        aria-label="Accessibility options" title="Accessibility options">
+                    <img src="/assets/icons/accessibility.svg" alt="" aria-hidden="true">
+                </button>
+            </li>
+        </ul>
 
-            <div class="searchposition">
-                <form class="search-box" id="siteSearchForm" method="get"
-                      action="https://www.google.com/search" target="_blank"
-                      autocomplete="off" role="search">
-                    <input type="search" class="form-control" id="siteSearchInput"
-                           name="q" placeholder="Search..." maxlength="200"
-                           aria-label="Search the Personnel and Administrative Reforms Department website" required>
-                    <input type="hidden" name="sitesearch" value="personnel.meghalaya.gov.in">
-                    <button type="submit" class="search-icon-btn" aria-label="Search">
-                        <img src="/assets/icons/search.svg" alt="" aria-hidden="true">
-                    </button>
-                </form>
-            </div>
-
-            <a href="https://www.digitalindia.gov.in/" class="header-right-logo"
-               target="_blank" rel="noopener noreferrer"
-               aria-label="Digital India (opens in a new window)">
-                <img src="/assets/images/digitalIndia.svg" alt="Digital India">
-            </a>
-        </div>
     </div>
 </header>
 
@@ -103,35 +85,36 @@
                 <a href="index.html">Home</a>
             </li>
 
-            <!-- About: the Department itself -->
+            <!-- Department (DBIM A.5.1) -->
             <li class="has-dropdown">
                 <a href="#" aria-haspopup="true" aria-expanded="false">
-                    About
+                    Department
                     <img src="/assets/icons/down.svg" alt="" aria-hidden="true">
                 </a>
                 <ul class="dropdown-menu">
-                    <li><a href="about-us.html">About the Department</a></li>
-                    <li><a href="organisation.html">Organisation Set Up</a></li>
+                    <li><a href="about-us.html">About Us</a></li>
+                    <li><a href="organisation.html">Our Team</a></li>
+                    <li><a href="organisations.html">Our Organisations</a></li>
                     <li><a href="who.html">Who's Who</a></li>
+                    <li><a href="ias-list.html">IAS Officers List</a></li>
+                    <li><a href="mcs-list.html">MCS Officers List</a></li>
                 </ul>
             </li>
 
-            <!-- Officers: the officer lists moved here from Department, and the property
-                 return pages from Offerings, because officers are the ones who use them. -->
+            <!-- Offerings (DBIM A.5.2) -->
             <li class="has-dropdown">
                 <a href="#" aria-haspopup="true" aria-expanded="false">
-                    Officers
+                    Offerings
                     <img src="/assets/icons/down.svg" alt="" aria-hidden="true">
                 </a>
                 <ul class="dropdown-menu">
-                    <li><a href="ias-list.html">IAS Officers List</a></li>
-                    <li><a href="mcs-list.html">MCS Officers List</a></li>
+                    <li><a href="services.html">Services</a></li>
                     <li><a href="https://megedistrict.gov.in/directApply.do?serviceId=1287" target="_blank" rel="noopener noreferrer">File Annual Property Return<span class="visually-hidden"> (opens in a new window)</span></a></li>
                     <li><a href="ipr.html">Property Return Status</a></li>
                 </ul>
             </li>
 
-            <!-- Documents: what the Department publishes -->
+            <!-- Documents (DBIM A.5.3) -->
             <li class="has-dropdown">
                 <a href="#" aria-haspopup="true" aria-expanded="false">
                     Documents
@@ -144,18 +127,15 @@
                 </ul>
             </li>
 
-            <!-- Contact: ways for the public to reach the Department.
-                 Grievance Redressal moved here from Offerings: it is how citizens raise a complaint. -->
             <li class="has-dropdown">
                 <a href="#" aria-haspopup="true" aria-expanded="false">
-                    Contact
+                    Connect
                     <img src="/assets/icons/down.svg" alt="" aria-hidden="true">
                 </a>
                 <ul class="dropdown-menu">
                     <li><a href="contact-us.html">Contact Us</a></li>
                     <li><a href="public-grievance.html">Public Grievance Redressal</a></li>
                     <li><a href="rti.html">Right to Information (RTI)</a></li>
-                    <li><a href="help.html">Help</a></li>
                 </ul>
             </li>
 
