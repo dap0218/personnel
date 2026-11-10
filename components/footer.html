@@ -20,9 +20,18 @@
                 </div>
 
                 <div class="col-lg-4 footer-subscribe d-flex justify-content-lg-end">
-                    <div class="government-logos">
-                        <a href="https://merisarkar.mygov.in/" target="_blank" rel="noopener noreferrer">
-                            <img src="/assets/images/mygovmerisarkar.webp" alt="MyGov Meri Sarkar, opens in a new window">
+                    <div class="government-logos d-flex align-items-center gap-3">
+                        <a href="https://meghalaya.gov.in/"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="text-decoration-none bg-white rounded-3 shadow-sm border-start border-success border-4 px-3 py-2 d-flex flex-column justify-content-center text-start"
+                           aria-label="Meghalaya.gov.in, Government of Meghalaya, opens in a new window">
+                            <span class="d-block fw-bold text-primary fs-5 lh-sm">
+                                Meghalaya<span class="text-success">.gov.in</span>
+                            </span>
+                            <span class="d-block text-secondary small">
+                                Government of Meghalaya
+                            </span>
                         </a>
                         <a href="https://www.india.gov.in/" target="_blank" rel="noopener noreferrer">
                             <img src="/assets/images/indiaportal.svg" alt="India.gov.in, National Portal of India, opens in a new window">
@@ -58,7 +67,7 @@
 
   <!-- ACCESSIBILITY PANEL -->
  
-  <div class="uwaw uw-light-theme gradient-head uwaw-initial paid_widget" id="uw-main">
+<div class="uwaw uw-light-theme gradient-head uwaw-initial paid_widget" id="uw-main">
     <div class="relative second-panel">
         <h4 class="text-white">Accessibility Controls</h4>
         <div class="uwaw-close"
@@ -320,5 +329,30 @@
               <span class="reset-btn-text">Reset All Settings</span>
           </button>
       </div>
+    </div>
+</div>
+
+
+<!-- Website Search Results Modal -->
+<div id="searchModal"
+     role="dialog"
+     aria-modal="true"
+     aria-hidden="true"
+     aria-labelledby="searchModalTitle">
+
+    <div class="modal-box">
+
+        <div class="modal-header">
+            <h2 id="searchModalTitle">Search Results</h2>
+
+            <button type="button"
+                    id="closeSearchModal"
+                    aria-label="Close">&times;</button>
+        </div>
+
+        <p id="searchQueryText"></p>
+
+        <div id="searchResults" aria-live="polite"></div>
+
     </div>
 </div>

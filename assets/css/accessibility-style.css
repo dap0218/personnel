@@ -24,7 +24,7 @@ textarea {
 
   --color-white:#fff;
 
-  --color-dark-blue-1:#0F5757;
+  --color-dark-blue-1:#162F6A;
 
 }
 
@@ -876,7 +876,7 @@ textarea {
 
 .chat-container .cancel {
 
-  background-color: #0F5757;
+  background-color: #162F6A;
 
   position: absolute;
 
@@ -976,7 +976,7 @@ textarea {
 
 .btn-blue {
 
-  background: #0F5757;
+  background: #162F6A;
 
   color: var(--color-white);
 
@@ -1328,7 +1328,7 @@ body[data-gr-ext-installed]{
 
   font-size: 16px;
 
-  color: #0F5757 !important;
+  color: #162F6A !important;
 
   appearance: none;
 
@@ -1466,7 +1466,7 @@ body[data-gr-ext-installed]{
 
    #uw-main {
 
-    --color-dark-blue-1: #0F5757 !important;
+    --color-dark-blue-1: #162F6A !important;
 
 }
 
@@ -1474,7 +1474,7 @@ body[data-gr-ext-installed]{
 
 #uw-main .second-panel {
 
-    background-color: #0F5757 !important;
+    background-color: #162F6A !important;
 
 }
 
@@ -1486,7 +1486,7 @@ body[data-gr-ext-installed]{
 
 #uw-main .feature-active .light_dark_icon i {
 
-    color: #0F5757 !important;
+    color: #162F6A !important;
 
 }
 
@@ -1516,7 +1516,7 @@ body[data-gr-ext-installed]{
 
 #uw-main .feature-active .icon-speaker {
 
-    background-color: #0F5757 !important;
+    background-color: #162F6A !important;
 
 }
 
@@ -1524,7 +1524,7 @@ body[data-gr-ext-installed]{
 
 #uw-main .feature-active .uwaw-features__item__i {
 
-    border-color: #0F5757 !important;
+    border-color: #162F6A !important;
 
 }
 
@@ -1534,7 +1534,7 @@ body[data-gr-ext-installed]{
 
 #uw-main .tick-active {
 
-    background-color: #0F5757 !important;
+    background-color: #162F6A !important;
 
 }
 
@@ -1542,13 +1542,13 @@ body[data-gr-ext-installed]{
 
 #uw-main .btn-reset-all {
 
-    color: #0F5757 !important;
+    color: #162F6A !important;
 
 }
 
 #uw-main .reset-icon {
 
-    background-color: #0F5757 !important;
+    background-color: #162F6A !important;
 
 }
 

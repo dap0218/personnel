@@ -112,6 +112,13 @@ TEMPLATE_HEAD = """<!DOCTYPE html>
     <script src="assets/js/navbar_scroll.js"></script>
     <script src="assets/js/accessibility.js"></script>
     <script src="assets/js/weights.js"></script>
+    <script src="assets/js/site-search.js"></script>
+
+
+
+
+
+
   </body>
 </html>
 """

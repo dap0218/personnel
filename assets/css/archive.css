@@ -136,6 +136,27 @@
    .archive-table .archive-sno { width: 7rem; text-align: center; }
    .archive-table .archive-date { width: 12rem; white-space: nowrap; }
    .archive-table .archive-section { width: 16rem; }
+   /* Section label in the table: white text on the blue badge (was blue on blue, so invisible) */
+   .archive-table .archive-section .badge,
+   .archive-table .archive-section .badge *,
+   .archive-table .archive-section .archive-section-link {
+     display: inline-block;
+     max-width: 100%;
+     padding: .4rem .9rem;
+     background-color: var(--dbim-powder-blue) !important;
+     border: 0;
+     border-radius: .4rem;
+     color: var(--dbim-white) !important;
+     font-size: var(--dbim-fs-p2) !important;
+     font-weight: 600;
+     line-height: 1.3;
+     text-align: left;
+     text-decoration: none;
+     white-space: normal;
+   }
+   .archive-table .archive-section .badge * { display: inline; padding: 0; background: none !important; }
+   .archive-table .archive-section .archive-section-link:hover,
+   .archive-table .archive-section .badge a:hover { background-color: var(--dbim-wintergreen-dream) !important; text-decoration: underline; }
    .archive-table a { color: var(--dbim-text-accent); font-weight: 500; text-decoration: underline; text-underline-offset: .2em; }
    .archive-table a:hover { color: var(--dbim-wintergreen-dream); text-decoration-thickness: 2px; }
    .archive-table .file-type { color: #4A4A4A; font-size: .9em; font-weight: 400; white-space: nowrap; }

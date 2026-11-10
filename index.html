@@ -11,7 +11,7 @@
     <link href="../assets/css/boostrap.min.css" rel="stylesheet">
     <link href="../assets/css/style.css" rel="stylesheet">
 
-    <link href="../assets/css/home.css?v=1" rel="stylesheet">
+    <link href="../assets/css/home.css" rel="stylesheet">
     <link href="../assets/css/footer.css" rel="stylesheet">
     <link href="../assets/css/personas.css" rel="stylesheet">
     <link href="../assets/css/accessibility-style.css" rel="stylesheet">
@@ -20,15 +20,10 @@
 
 
 <body>
-    <!-- Header (sticky on scroll, DBIM A.4.1 i) -->
     <div id="header" data-include="components/header.html"></div>
 
     <main id="main-content">
         <h1 class="visually-hidden">Personnel &amp; Administrative Reforms Department, Government of Meghalaya – Homepage</h1>
-
-        <!-- Top banner carousel (DBIM A.4.1 ii): 1800 x 338, 1800 x 500 or 1800 x 600 px, under 500 KB.
-             DBIM 7.4.1: the FIRST slide must be the full-width CCPS banner from the DBIM Toolkit API.
-             Any text on a banner must be HTML text, not part of the image (DBIM 8.1). -->
         <div
                 id="govBanner"
                 class="carousel slide centralimg"
@@ -37,7 +32,6 @@
             >
 
             <div class="carousel-inner">
-                <!-- CHECK: insert the CCPS full-width banner here as the first, active slide. -->
                 <div class="carousel-item active">
                     <img
                         src="assets/images/banner/personnel_banner.webp"
@@ -94,7 +88,7 @@
         >
 
             <h2 id="announcements-heading">
-                Announcements
+                Latest News
                 <img src="assets/icons/announcement.svg" alt="" aria-hidden="true">
 
             </h2>
@@ -131,11 +125,6 @@
 
         </section>
 
-        <!-- CHECK (DBIM A.4.1 iv): PM Quote section goes here: PM image with transparent background,
-             a sector-specific quote within the last year, citing event and date, in the darkest shade
-             of the colour group, with a link to the source. Obtain from pmindia.gov.in or the DBIM Toolkit only. -->
-
-        <!-- Department section (DBIM A.4.1 v): about the Department with headshots of the Minister -->
         <section class="container pt-4" aria-labelledby="about-heading">
             <div class="row">
                  <!-- ABOUT US  -->
@@ -173,9 +162,6 @@
                     </div>
                 </div>
 
-
-                <!-- LEADERSHIP: arranged by seniority, titles used uniformly (DBIM A.5.6 v, vi).
-                     Headshots: 1:1, white background, face covering 50% of the frame (DBIM 6.1.4). -->
                 <div class="col-lg-4 col-md-5">
                     <h2 class="visually-hidden">Leadership</h2>
 
@@ -196,7 +182,7 @@
                                     Sangma
                                 </p>
 
-                                <small>Hon'ble Chief Minister<br>(in charge of Personnel &amp; AR)</small>
+                                <small>Hon'ble Chief Minister of Meghalaya<br>(in charge of Personnel &amp; AR)</small>
 
                             </div>
 
@@ -228,12 +214,6 @@
         <section class="news-section home-news" aria-label="Key offerings and what's new">
             <div class="container">
                 <div class="row g-4 align-items-stretch">
-
-                    <!-- KEY OFFERINGS (DBIM A.4.1 vi): the Department's own offerings only (up to five entries),
-                         with a View More button to the Offerings page. Uses the existing ko- styles.
-                         Department, Documents and Connect items are not repeated here (DBIM 7.1.3).
-                         DSC notices are notifications (in What's New) and MPSC is a separate commission
-                         (in Associated Organisations), so neither is listed as an offering. -->
                     <div class="col-lg-5">
                         <div class="home-panel">
                             <div class="section-heading d-flex align-items-center">
@@ -274,15 +254,14 @@
 
                             <div class="text-end mt-3">
                                 <a href="offerings.html" class="detailsBtn">
-                                    <span>View More<span class="visually-hidden"> offerings</span></span>
+                                    <span>VIEW MORE<span class="visually-hidden"> offerings</span></span>
                                     <img src="../assets/icons/arrow_forward.svg" alt="" aria-hidden="true">
                                 </a>
                             </div>
                         </div>
                     </div>
 
-                    <!-- WHAT'S NEW (DBIM A.4.1 vii): 5 latest items from data/whats_new.xlsx, newest first -->
-                    <div class="col-lg-7">
+                     <div class="col-lg-7">
                         <div class="home-panel">
                             <div class="section-heading d-flex align-items-center">
                                 <img src="assets/icons/what's_new.svg" alt="" aria-hidden="true">
@@ -290,8 +269,6 @@
                             </div>
 
                             <div class="wn-scroll" id="whatsNewBox">
-                                <!-- Filled by assets/js/whats-new.js from data/whats_new.xlsx (5 latest items, newest first).
-                                     The items below are shown if the Excel file cannot be read. -->
                                 <ul class="wn-list" id="whatsNewList" aria-labelledby="whats-new-heading">
                                     <li class="wn-item">
                                         <a href="notifications/2026/DSC%20Exam%20sequence.pdf" target="_blank" rel="noopener noreferrer"><img src="../assets/icons/chevron_right.svg" class="wn-icon" alt="" aria-hidden="true" width="16" height="16"><span class="wn-text">District Selection Committees (DSCs) examinations – sequence thereof <span class="file-type">(PDF, 3 MB)</span><span class="visually-hidden"> (opens in a new window)</span></span></a>
@@ -307,7 +284,7 @@
 
                             <div class="text-end mt-3">
                                 <a href="notifications.html" class="detailsBtn">
-                                    <span>View More<span class="visually-hidden"> new items</span></span>
+                                    <span>VIEW MORE<span class="visually-hidden"> new items</span></span>
                                     <img src="../assets/icons/arrow_forward.svg" alt="" aria-hidden="true">
                                 </a>
                             </div>
@@ -318,10 +295,6 @@
             </div>
         </section>
 
-        <!-- CHECK (DBIM A.4.1 viii): Recent Documents section goes here, listing the latest documents
-             uploaded to the site (rules, orders, circulars, forms). -->
-
-
         <!-- USER PERSONAS (DBIM A.4.1 ix) + IMPORTANT LINKS (DBIM A.4.1 x) -->
         <section id="services-for-you" class="personas-section" aria-label="Services for you and important links">
             <div class="container">
@@ -331,9 +304,9 @@
                     <div class="col-lg-8 personas-main">
                 <div class="section-heading d-flex align-items-center">
                     <img src="assets/icons/personas.svg" class="heading-svg" alt="" aria-hidden="true" width="28" height="28">
-                    <h2 class="section-title mb-0" id="persona-heading">Explore your Personas: Services for You</h2>
+                    <h2 class="section-title mb-0" id="persona-heading">Explore your Personas: Find What You Need</h2>
                 </div>
-                <p class="personas-intro">Choose who you are to see the services you need the most.</p>
+                <p class="personas-intro">Choose who you are to see what you need the most.</p>
 
                 <div class="pc-slider" role="region" aria-roledescription="carousel" aria-label="Services for you by persona">
                     <div class="pc-nav">
@@ -352,33 +325,33 @@
                                     <li><a href="notifications.html">Latest notifications</a></li>
                                     <li><a href="https://megedistrict.gov.in/directApply.do?serviceId=1287" target="_blank" rel="noopener noreferrer">File your Annual Property Return<span class="visually-hidden"> (opens in a new window)</span></a></li>
                                 </ul>
-                                <a class="pc-slide-btn" href="personas/employee.html">View All Services<span class="visually-hidden"> for Government Employee</span></a>
+                                <a class="pc-slide-btn" href="personas/employee.html">VIEW MORE<span class="visually-hidden"> for Government Employee</span></a>
                             </div>
                         </li>
                         <li class="pc-slide" id="pc-slide-officer" role="group" aria-roledescription="slide" aria-label="2 of 5: IAS or MCS Officer">
                             <div class="pc-slide-img"><img src="assets/images/personas/policy_maker.png" alt="" width="400" height="400" loading="lazy"></div>
                             <div class="pc-slide-body">
                                 <h3 class="pc-slide-name">For IAS or MCS Officer</h3>
-                                <p class="pc-slide-text">Officer lists, postings, property returns and pension forms for IAS and MCS officers.</p>
+                                <p class="pc-slide-text">Property returns, postings and pension forms for IAS and MCS officers.</p>
                                 <ul class="pc-slide-links">
-                                    <li><a href="ias-list.html">IAS Officers List</a></li>
-                                    <li><a href="mcs-list.html">MCS Officers List</a></li>
-                                    <li><a href="ipr.html">Immovable and annual property returns</a></li>
+                                    <li><a href="ipr.html">Immovable Property Returns (IPR)</a></li>
+                                    <li><a href="ipr-mcs.html">Annual Property Returns – MCS</a></li>
+                                    <li><a href="notifications.html">Postings and transfers</a></li>
                                 </ul>
-                                <a class="pc-slide-btn" href="personas/officer.html">View All Services<span class="visually-hidden"> for IAS or MCS Officer</span></a>
+                                <a class="pc-slide-btn" href="personas/officer.html">VIEW MORE<span class="visually-hidden"> for IAS or MCS Officer</span></a>
                             </div>
                         </li>
                         <li class="pc-slide" id="pc-slide-jobseeker" role="group" aria-roledescription="slide" aria-label="3 of 5: Job Seeker">
                             <div class="pc-slide-img"><img src="assets/images/personas/student.png" alt="" width="400" height="400" loading="lazy"></div>
                             <div class="pc-slide-body">
                                 <h3 class="pc-slide-name">For Job Seeker</h3>
-                                <p class="pc-slide-text">Recruitment rules, District Selection Committee examinations and age limits.</p>
+                                <p class="pc-slide-text">Recruitment notices, recruitment rules and the Public Service Commission.</p>
                                 <ul class="pc-slide-links">
-                                    <li><a href="notifications/2026/DSC%20Exam%20sequence.pdf" target="_blank" rel="noopener noreferrer">DSC examinations – sequence <span class="file-type">(PDF, 3 MB)</span><span class="visually-hidden"> (opens in a new window)</span></a></li>
-                                    <li><a href="notifications/2026/Revised%20Syllabus%20of%20Qualifying%20Paper%20on%20Local%20Language.pdf" target="_blank" rel="noopener noreferrer">Local Language qualifying paper syllabus <span class="file-type">(PDF, 3 MB)</span><span class="visually-hidden"> (opens in a new window)</span></a></li>
-                                    <li><a href="https://mpsc.nic.in/" target="_blank" rel="noopener noreferrer">Meghalaya Public Service Commission<span class="visually-hidden"> (opens in a new window)</span></a></li>
+                                    <li><a href="notifications.html">DSC examination notices</a></li>
+                                    <li><a href="rules.html">Recruitment rules</a></li>
+                                    <li><a href="https://mpsc.meghalaya.gov.in/" target="_blank" rel="noopener noreferrer">Meghalaya Public Service Commission<span class="visually-hidden"> (opens in a new window)</span></a></li>
                                 </ul>
-                                <a class="pc-slide-btn" href="personas/jobseeker.html">View All Services<span class="visually-hidden"> for Job Seeker</span></a>
+                                <a class="pc-slide-btn" href="personas/jobseeker.html">VIEW MORE<span class="visually-hidden"> for Job Seeker</span></a>
                             </div>
                         </li>
                         <li class="pc-slide" id="pc-slide-pensioner" role="group" aria-roledescription="slide" aria-label="4 of 5: Pensioner">
@@ -391,7 +364,7 @@
                                     <li><a href="forms-mcs.html">MCS pension forms</a></li>
                                     <li><a href="forms-mss.html">MSS and Steno pension forms</a></li>
                                 </ul>
-                                <a class="pc-slide-btn" href="personas/pensioner.html">View All Services<span class="visually-hidden"> for Pensioner</span></a>
+                                <a class="pc-slide-btn" href="personas/pensioner.html">VIEW MORE<span class="visually-hidden"> for Pensioner</span></a>
                             </div>
                         </li>
                         <li class="pc-slide" id="pc-slide-citizen" role="group" aria-roledescription="slide" aria-label="5 of 5: Citizen">
@@ -404,7 +377,7 @@
                                     <li><a href="public-grievance.html">State Public Grievance Redressal</a></li>
                                     <li><a href="contact-us.html">Contact the Department</a></li>
                                 </ul>
-                                <a class="pc-slide-btn" href="personas/citizen.html">View All Services<span class="visually-hidden"> for Citizen</span></a>
+                                <a class="pc-slide-btn" href="personas/citizen.html">VIEW MORE<span class="visually-hidden"> for Citizen</span></a>
                             </div>
                         </li>
                     </ul>
@@ -418,8 +391,6 @@
                 </div>
                     </div>
 
-                    <!-- IMPORTANT LINKS (DBIM A.4.1 x): most accessed or priority portals.
-                         Annual Property Return was removed here: it is now in Key Offerings (DBIM 7.1.3). -->
                     <div class="col-lg-4 personas-links">
                         <div class="alerts-panel">
                             <div class="section-heading important-links-heading">
@@ -427,40 +398,40 @@
                                 <h2 class="section-title" id="important-links-title">Important Links</h2>
                             </div>
 
-                            <ul class="alerts-list" aria-labelledby="important-links-title">
-                                <li class="alert-item">
-                                    <h3 class="alert-title">Right to Information</h3>
-                                    <a href="rti.html">Public Information Officers and how to apply</a>
-                                </li>
-                                <li class="alert-item">
-                                    <h3 class="alert-title">CM Connect – Grievances</h3>
-                                    <div class="alert-links">
-                                        <a href="tel:1971">Call toll-free 1971</a>
-                                        <a href="tel:18003456851">Call toll-free 1800-3456-851</a>
-                                        <a href="https://wa.me/919436394363" target="_blank" rel="noopener noreferrer">WhatsApp 94363 94363<span class="visually-hidden"> (opens in a new window)</span></a>
-                                    </div>
-                                    <p class="small mb-0 mt-1">8 am to 8 pm daily</p>
-                                </li>
-                                <li class="alert-item">
-                                    <h3 class="alert-title">Recruitment Reforms</h3>
-                                    <a href="Rules/Final%20Report%20Reform%20Committee.pdf" target="_blank" rel="noopener noreferrer">Report of the MPSC Reforms Committee, 2025 <span class="file-type">(PDF, 10 MB)</span><span class="visually-hidden"> (opens in a new window)</span></a>
-                                </li>
-                                <li class="alert-item">
-                                    <h3 class="alert-title">NeSDA Citizen Survey</h3>
-                                    <a href="https://nesda.gov.in/" target="_blank" rel="noopener noreferrer">National e-Governance Service Delivery Assessment<span class="visually-hidden"> (opens in a new window)</span></a>
-                                </li>
-                                <li class="alert-item">
-                                    <h3 class="alert-title">Government of India</h3>
-                                    <div class="alert-links">
-                                        <a href="https://dopt.gov.in/" target="_blank" rel="noopener noreferrer">Department of Personnel and Training<span class="visually-hidden"> (opens in a new window)</span></a>
-                                        <a href="https://darpg.gov.in/" target="_blank" rel="noopener noreferrer">Department of Administrative Reforms and Public Grievances<span class="visually-hidden"> (opens in a new window)</span></a>
-                                    </div>
-                                </li>
-                            </ul>
+                            <div class="important-links-list" role="region" aria-labelledby="important-links-title" tabindex="0">
+                                <a href="rti.html">
+                                    <span>Right to Information</span>
+                                    <img src="../assets/icons/chevron_right.svg" alt="" aria-hidden="true">
+                                </a>
+                                <a href="tel:1971">
+                                    <span>CM Connect: Grievances, call toll-free 1971</span>
+                                    <img src="../assets/icons/chevron_right.svg" alt="" aria-hidden="true">
+                                </a>
+                                <a href="tel:18003456851">
+                                    <span>CM Connect: Grievances, call toll-free 1800-3456-851</span>
+                                    <img src="../assets/icons/chevron_right.svg" alt="" aria-hidden="true">
+                                </a>
+                                <a href="https://wa.me/919436394363" target="_blank" rel="noopener noreferrer">
+                                    <span>CM Connect: Grievances on WhatsApp 94363 94363<span class="visually-hidden"> (opens in a new window)</span></span>
+                                    <img src="../assets/icons/chevron_right.svg" alt="" aria-hidden="true">
+                                </a>
+                                <a href="https://nesda.gov.in/" target="_blank" rel="noopener noreferrer">
+                                    <span>NeSDA Citizen Survey<span class="visually-hidden"> (opens in a new window)</span></span>
+                                    <img src="../assets/icons/chevron_right.svg" alt="" aria-hidden="true">
+                                </a>
+                                <a href="https://dopt.gov.in/" target="_blank" rel="noopener noreferrer">
+                                    <span>Department of Personnel and Training<span class="visually-hidden"> (opens in a new window)</span></span>
+                                    <img src="../assets/icons/chevron_right.svg" alt="" aria-hidden="true">
+                                </a>
+                                <a href="https://darpg.gov.in/" target="_blank" rel="noopener noreferrer">
+                                    <span>Department of Administrative Reforms and Public Grievances<span class="visually-hidden"> (opens in a new window)</span></span>
+                                    <img src="../assets/icons/chevron_right.svg" alt="" aria-hidden="true">
+                                </a>
+                            </div>
 
                             <div class="important-links-more">
                                 <a href="related-links.html" class="detailsBtn">
-                                    <span>View More<span class="visually-hidden"> related links</span></span>
+                                    <span>VIEW MORE<span class="visually-hidden"> related links</span></span>
                                     <img src="../assets/icons/arrow_forward.svg" alt="" aria-hidden="true">
                                 </a>
                             </div>
@@ -495,7 +466,7 @@
                             <span class="org-tile-icon"><img src="assets/icons/sw-office.svg" alt="" aria-hidden="true" width="24" height="24"></span>
                             <span class="org-tile-body">
                                 <span class="org-kicker">Commission</span>
-                                <h3><a href="https://mpsc.nic.in/" target="_blank" rel="noopener noreferrer">Meghalaya Public Service Commission (MPSC)<span class="visually-hidden"> (opens in a new window)</span></a></h3>
+                                <h3><a href="https://mpsc.meghalaya.gov.in/" target="_blank" rel="noopener noreferrer">Meghalaya Public Service Commission (MPSC)<span class="visually-hidden"> (opens in a new window)</span></a></h3>
                                 <p>Recruitment to State services and posts.</p>
                             </span>
                             <img src="assets/icons/sw-arrow-right.svg" class="org-arrow" alt="" aria-hidden="true" width="20" height="20">
@@ -517,8 +488,7 @@
                             <span class="org-tile-icon"><img src="assets/icons/sw-shield.svg" alt="" aria-hidden="true" width="24" height="24"></span>
                             <span class="org-tile-body">
                                 <span class="org-kicker">Commission</span>
-                                <!-- CHECK: link to the MSPSDC website or its own detail page, not the About Us page (DBIM A.5.1.3). -->
-                                <h3><a href="about-us.html">Meghalaya State Public Services Delivery Commission (MSPSDC)</a></h3>
+                                <h3><a href="https://mspsdc.meghalaya.gov.in/" target="_blank" rel="noopener noreferrer">Meghalaya State Public Services Delivery Commission (MSPSDC)<span class="visually-hidden"> (opens in a new window)</span></a></h3>
                                 <p>Time-bound delivery of notified public services.</p>
                             </span>
                             <img src="assets/icons/sw-arrow-right.svg" class="org-arrow" alt="" aria-hidden="true" width="20" height="20">
@@ -529,8 +499,7 @@
                             <span class="org-tile-icon"><img src="assets/icons/sw-training.svg" alt="" aria-hidden="true" width="24" height="24"></span>
                             <span class="org-tile-body">
                                 <span class="org-kicker">Institution</span>
-                                <!-- CHECK: link to the MATI website or its own detail page, not the About Us page. -->
-                                <h3><a href="about-us.html">Meghalaya Administrative Training Institute (MATI)</a></h3>
+                                <h3><a href="https://mati.gov.in/" target="_blank" rel="noopener noreferrer">Meghalaya Administrative Training Institute (MATI)<span class="visually-hidden"> (opens in a new window)</span></a></h3>
                                 <p>Training of State Government officials.</p>
                             </span>
                             <img src="assets/icons/sw-arrow-right.svg" class="org-arrow" alt="" aria-hidden="true" width="20" height="20">
@@ -562,15 +531,6 @@
             </div>
         </section>
 
-        <!-- CHECK (DBIM A.4.1 xi): Citizen Engagement section goes here, with the Department's social media
-             feeds (X, Instagram, Facebook, YouTube: at least four platforms, DBIM A.4.1 xi). -->
-
-        <!-- CHECK (DBIM A.4.1 xii, 7.4.3): Central Posts section goes here: CCPS posts in 3 grids,
-             960 x 245 px, from the DBIM Toolkit API. -->
-
-
-        <!-- FOOTER CAROUSEL (DBIM A.4.1 xiv): logos of related initiatives and portals.
-             Logos under 100 KB, not distorted (DBIM 5.5). -->
         <section class="important-links-slider-section" aria-label="Related government portals">
             <div class="container">
                 <div class="important-links-slider">
@@ -629,8 +589,7 @@
         </section>
     </main>
 
-    <!-- Footer (DBIM 5.6): must include Website Policies, Sitemap, Related Links, Help, Feedback,
-         Contact Us, Last Updated On, and the lineage line. -->
+
     <div data-include="components/footer.html"></div>
 
     <!-- Scripts -->
@@ -647,6 +606,13 @@
     <script src="assets/js/navbar_scroll.js"></script>
     <script src="assets/js/accessibility.js"></script>
     <script src="assets/js/weights.js"></script>
+    <script src="assets/js/site-search.js"></script>
+
+
+
+
+
+
 </body>
 
 </html>
