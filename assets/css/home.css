@@ -1,4 +1,3 @@
-
 body .custom-select svg path { fill: var(--dbim-dark-text); }
   
 body .clearbtn:focus-visible {
@@ -2340,3 +2339,84 @@ outline-offset: 2px;
 padding-left: 1.6rem;
 padding-right: 1.6rem;
 }
+
+
+/* =========================================================
+   WAVE CONTRAST FIXES
+   WAVE also checks screen-reader-only text. Bootstrap gives carousel
+   buttons color:#fff, so their hidden "Previous / Next" labels were
+   white on a white background. Dark text fixes that; the visible
+   arrows are drawn with their own borders, so nothing you see changes.
+   Colours have hex fallbacks in case a DBIM token is missing, and
+   !important so style.css / accessibility-style.css can't undo them.
+   ========================================================= */
+
+/* Banner arrows */
+#govBanner .carousel-control-prev,
+#govBanner .carousel-control-next,
+#govBanner .carousel-control-prev:hover,
+#govBanner .carousel-control-next:hover,
+#govBanner .carousel-control-prev:focus,
+#govBanner .carousel-control-next:focus,
+#govBanner .carousel-control-prev .visually-hidden,
+#govBanner .carousel-control-next .visually-hidden {
+  color: #1B1B1B !important;
+}
+
+/* Government portals carousel (if the page uses the Bootstrap version) */
+.government-carousel-section .carousel-control-prev,
+.government-carousel-section .carousel-control-next,
+.government-carousel-section .carousel-control-prev:hover,
+.government-carousel-section .carousel-control-next:hover,
+.government-carousel-section .carousel-control-prev:focus,
+.government-carousel-section .carousel-control-next:focus,
+.government-carousel-section .carousel-control-prev .visually-hidden,
+.government-carousel-section .carousel-control-next .visually-hidden,
+.government-carousel-section .carousel-item a,
+.government-carousel-section .carousel-item a .visually-hidden {
+  color: #1B1B1B !important;
+}
+.government-carousel-section .carousel-control-prev,
+.government-carousel-section .carousel-control-next { opacity: 1 !important; }
+
+/* Government portals slider (auto-scrolling version):
+   hidden "(opens in a new window)" text inside each logo link */
+.important-links-card,
+.important-links-card:hover,
+.important-links-card:focus,
+.important-links-card .visually-hidden {
+  color: #1B1B1B !important;
+}
+.important-links-slider-prev,
+.important-links-slider-next {
+  color: var(--dbim-wintergreen-dream, #5D3E00) !important;
+}
+
+/* Announcements ticker: dark text on linen, including hidden text */
+.news-ticker-horizontal {
+  background-color: var(--dbim-linen, #FAF0E6) !important;
+}
+.news-ticker-horizontal h2,
+.news-ticker-horizontal .ticker-track a,
+.news-ticker-horizontal .ticker-track a:visited,
+.news-ticker-horizontal .ticker-track a:hover,
+.news-ticker-horizontal .ticker-track a:focus,
+.news-ticker-horizontal .ticker-track a .visually-hidden {
+  color: var(--dbim-deep-earthy-brown, #2B1B00) !important;
+}
+.news-ticker-horizontal .ticker-track a .file-type { color: #3D3D3D !important; }   /* about 10:1 on linen */
+.news-ticker-horizontal .ticker-track a:focus-visible {
+  outline: 3px solid var(--dbim-info-blue, #005A9C);
+  outline-offset: 2px;
+}
+.news-ticker-horizontal .ticker-toggle,
+.news-ticker-horizontal .ticker-toggle .material-symbols-outlined {
+  color: var(--dbim-wintergreen-dream, #5D3E00) !important;
+}
+
+/* "(PDF)" label on the dark What's New rows: full white, no opacity */
+.wn-item a .file-type { color: #FFFFFF !important; opacity: 1 !important; }
+
+/* Grey intro lines: fallback if --dbim-grey-03 is not defined (7:1 on white) */
+.ko-intro,
+.org-intro { color: var(--dbim-grey-03, #595959); }
