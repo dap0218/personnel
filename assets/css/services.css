@@ -1,0 +1,230 @@
+/* =========================================================
+   SERVICES PAGE (services.html)
+   Uses only the DBIM tokens defined in style.css (:root).
+   Note: html font-size is 62.5%, so 1rem = 10px here.
+   ========================================================= */
+
+   .services-page .svc-intro {
+    max-width: 80rem;
+    margin: 0 auto 3.2rem;
+    color: var(--dbim-dark-text);
+    font-size: var(--dbim-fs-p1);
+    line-height: 1.6;
+    text-align: center;
+  }
+  .services-page .svc-intro strong { font-weight: var(--dbim-font-weight-semibold); }
+  
+  /* ---------- Groups ---------- */
+  .services-page .svc-group { margin-bottom: var(--dbim-section-gap); scroll-margin-top: 12rem; }
+  .services-page .svc-group > h2 {
+    margin: 0 0 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--dbim-line);
+    color: var(--dbim-powder-blue);
+    font-size: var(--dbim-fs-h2);
+    font-weight: var(--dbim-font-weight-semibold);
+    line-height: 1.3;
+  }
+  
+  /* ---------- Card grid ---------- */
+  .services-page .svc-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(32rem, 1fr));
+    gap: 2.4rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .services-page .svc-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    padding: 2.4rem;
+    background: var(--dbim-white);
+    border: 1px solid var(--dbim-columbia-blue);
+    border-top: 4px solid var(--dbim-columbia-blue);
+    border-radius: var(--dbim-border-radius-lg);
+    box-shadow: var(--dbim-shadow-soft);
+    transition: border-color var(--dbim-transition-fast), box-shadow var(--dbim-transition-fast), transform var(--dbim-transition-fast);
+  }
+  .services-page .svc-card--primary {
+    border-top-color: var(--dbim-wintergreen-dream);
+    background: var(--dbim-surface-tint);
+  }
+  .services-page .svc-card:hover,
+  .services-page .svc-card:focus-within {
+    border-color: var(--dbim-powder-blue);
+    box-shadow: var(--dbim-shadow-card);
+    transform: translateY(-2px);
+  }
+  
+  /* Line icons in the key colour (DBIM: one icon style; key colour or white) */
+  .services-page .svc-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 5.6rem;
+    height: 5.6rem;
+    border-radius: var(--dbim-border-radius-md);
+    background: var(--dbim-azureish-white-bg);
+    color: var(--dbim-wintergreen-dream);
+  }
+  .services-page .svc-card--primary .svc-icon { background: var(--dbim-wintergreen-dream); color: var(--dbim-white); }
+  .services-page .svc-icon svg {
+    width: 3.2rem; height: 3.2rem;
+    fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round;
+  }
+  
+  /* Title */
+  .services-page .svc-card h3 {
+    margin: .4rem 0 0;
+    color: var(--dbim-dark-text);
+    font-size: var(--dbim-fs-h3);
+    font-weight: var(--dbim-font-weight-bold);
+    line-height: 1.35;
+  }
+  .services-page .svc-card h3 a,
+  .services-page .svc-card h3 a:hover,
+  .services-page .svc-card h3 a:focus {
+    color: var(--dbim-dark-text);
+    text-decoration: none;
+  }
+  .services-page .svc-card:hover h3 a { color: var(--dbim-wintergreen-dream); text-decoration: underline; text-underline-offset: .3rem; }
+  /* Whole card is clickable via the title link */
+  .services-page .svc-card h3 a::after { content: ""; position: absolute; inset: 0; border-radius: var(--dbim-border-radius-lg); }
+  .services-page .svc-card h3 a:focus-visible { outline: none; }
+  .services-page .svc-card h3 a:focus-visible::after { outline: 3px solid var(--dbim-info-blue); outline-offset: 3px; }
+  
+  /* Description and source */
+  .services-page .svc-card p {
+    margin: 0;
+    color: var(--dbim-dark-text);
+    font-size: var(--dbim-fs-p1);
+    line-height: 1.6;
+  }
+  .services-page .svc-card .svc-source {
+    color: var(--dbim-text-muted);
+    font-size: var(--dbim-fs-p2);
+  }
+  
+  .services-page .svc-nowrap { white-space: nowrap; }
+  .services-page .svc-ext {
+    width: .75em; height: .75em;
+    margin-left: .35em;
+    fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;
+  }
+  
+  /* CTA button: same look as .detailsBtn / .waw .btn (outline -> fill on hover) */
+  .services-page .svc-action {
+    align-self: flex-start;
+    display: inline-flex;
+    align-items: center;
+    gap: .8rem;
+    min-height: 4.4rem;
+    margin-top: auto;
+    padding: 1rem 2rem;
+    border: 2px solid var(--dbim-powder-blue);
+    border-radius: var(--dbim-border-radius-sm);
+    background: var(--dbim-white);
+    color: var(--dbim-powder-blue);
+    font-size: var(--dbim-fs-p1);
+    font-weight: var(--dbim-font-weight-semibold);
+    line-height: 1.2;
+    transition: background-color var(--dbim-transition-fast), border-color var(--dbim-transition-fast), color var(--dbim-transition-fast);
+  }
+  .services-page .svc-card:hover .svc-action,
+  .services-page .svc-card:focus-within .svc-action {
+    background: var(--dbim-powder-blue);
+    color: var(--dbim-white);
+  }
+  .services-page .svc-card--primary .svc-action {
+    background: var(--dbim-powder-blue);
+    color: var(--dbim-white);
+  }
+  .services-page .svc-card--primary:hover .svc-action,
+  .services-page .svc-card--primary:focus-within .svc-action {
+    background: var(--dbim-wintergreen-dream);
+    border-color: var(--dbim-wintergreen-dream);
+  }
+  .services-page .svc-arrow { display: inline-block; transition: transform var(--dbim-transition-fast); }
+  .services-page .svc-card:hover .svc-arrow { transform: translateX(3px); }
+  
+  /* ---------- Helpline block ---------- */
+  .services-page .svc-help {
+    display: grid;
+    grid-template-columns: minmax(26rem, 1fr) 2fr;
+    overflow: hidden;
+    border: 1px solid var(--dbim-columbia-blue);
+    border-radius: var(--dbim-border-radius-lg);
+  }
+  .services-page .svc-help__main {
+    padding: 2.8rem 3.2rem;
+    background: var(--dbim-wintergreen-dream);
+    color: var(--dbim-white);
+  }
+  .services-page .svc-help__main p { margin: 0; color: var(--dbim-white); }
+  .services-page .svc-help__label { font-size: var(--dbim-fs-p1); font-weight: var(--dbim-font-weight-semibold); }
+  .services-page .svc-help__note { font-size: var(--dbim-fs-p2) !important; }
+  .services-page .svc-help__number a,
+  .services-page .svc-help__number a:hover,
+  .services-page .svc-help__number a:focus {
+    color: var(--dbim-white);
+    font-size: var(--dbim-fs-h1);
+    font-weight: var(--dbim-font-weight-bold);
+    line-height: 1.25;
+    text-decoration: none;
+  }
+  .services-page .svc-help__number a:hover,
+  .services-page .svc-help__number a:focus-visible { text-decoration: underline; }
+  .services-page .svc-help__number a:focus-visible { outline: 3px solid var(--dbim-focus-halo); outline-offset: 2px; }
+  
+  .services-page .svc-help__alt {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.2rem;
+    margin: 0;
+    padding: 2.4rem 3.2rem;
+    list-style: none;
+    background: var(--dbim-surface-tint);
+  }
+  .services-page .svc-help__alt li {
+    display: flex;
+    align-items: baseline;
+    gap: 1.6rem;
+    font-size: var(--dbim-fs-p1);
+  }
+  .services-page .svc-help__alt li > span:first-child { min-width: 11rem; color: var(--dbim-text-secondary); }
+  .services-page .svc-help__alt a {
+    color: var(--dbim-powder-blue);
+    font-weight: var(--dbim-font-weight-semibold);
+    text-decoration: underline;
+    text-underline-offset: .3rem;
+  }
+  .services-page .svc-help__alt a:hover { color: var(--dbim-wintergreen-dream); }
+  
+  /* ---------- Tablet / phone (same breakpoint as style.css) ---------- */
+  @media (max-width: 991.5px) {
+    .services-page .svc-intro { font-size: var(--dbim-fs-p2); text-align: left; }
+    .services-page .svc-group > h2 { font-size: var(--dbim-fs-h2-sm); }
+    .services-page .svc-card h3 { font-size: var(--dbim-fs-h4); }
+  }
+  @media (max-width: 767.98px) {
+    .services-page .svc-grid { grid-template-columns: 1fr; gap: 1.6rem; }
+    .services-page .svc-card { padding: 2rem; }
+    .services-page .svc-card h3 { font-size: var(--dbim-fs-p1); }
+    .services-page .svc-card p { font-size: var(--dbim-fs-p2); }
+    .services-page .svc-help { grid-template-columns: 1fr; }
+    .services-page .svc-help__main,
+    .services-page .svc-help__alt { padding: 2rem 2.4rem; }
+    .services-page .svc-help__alt li { font-size: var(--dbim-fs-p2); }
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    .services-page .svc-card,
+    .services-page .svc-action,
+    .services-page .svc-arrow { transition: none; }
+    .services-page .svc-card:hover { transform: none; }
+    .services-page .svc-card:hover .svc-arrow { transform: none; }
+  }
